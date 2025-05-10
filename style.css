@@ -1,0 +1,371 @@
+        :root {
+            --primary: #4B2E83; /* UW Purple */
+            --secondary: #E8E3D3; /* UW Cream */
+            --accent: #85754D; /* UW Gold */
+            --highlight: #D22630; /* Comic red */
+        }
+
+        .action-line {
+            transform-origin: left center;
+            animation: actionLine 1s infinite alternate;
+        }
+
+        @keyframes actionLine {
+            0% { transform: scaleX(0.8) skew(-20deg); opacity: 0.7; }
+            100% { transform: scaleX(1) skew(-20deg); opacity: 1; }
+        }
+        
+        body {
+            font-family: 'Comic Neue', cursive;
+            background-color: var(--secondary);
+            color: #333;
+            overflow-x: hidden;
+        }
+        
+        .comic-title {
+            font-family: 'Bangers', cursive;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--primary);
+            text-shadow: 3px 3px 0 rgba(0,0,0,0.1);
+        }
+        
+        .comic-panel {
+            background-color: white;
+            border: 4px solid black;
+            box-shadow: 8px 8px 0 rgba(0,0,0,0.2);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .comic-panel::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="none" stroke="black" stroke-width="0.5" stroke-dasharray="2,2"/></svg>');
+            opacity: 0.05;
+            pointer-events: none;
+        }
+        
+        .speech-bubble {
+            position: relative;
+            background: white;
+            border: 3px solid black;
+            border-radius: 1em;
+            padding: 1rem;
+            margin: 1rem 0;
+            max-width: 80%;
+        }
+        
+        .speech-bubble::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 20px;
+            border-width: 15px 15px 0;
+            border-style: solid;
+            border-color: white transparent;
+            display: block;
+            width: 0;
+        }
+        
+        .speech-bubble::before {
+            content: '';
+            position: absolute;
+            bottom: -18px;
+            left: 18px;
+            border-width: 17px 17px 0;
+            border-style: solid;
+            border-color: black transparent;
+            display: block;
+            width: 0;
+        }
+        
+        .action-line {
+            font-family: 'Bangers', cursive;
+            color: var(--highlight);
+            transform: rotate(-3deg);
+            text-shadow: 2px 2px 0 black;
+            letter-spacing: 1px;
+            font-size: 1.5rem;
+            margin: 1rem 0;
+        }
+        
+        .comic-button {
+            font-family: 'Bangers', cursive;
+            background-color: var(--highlight);
+            color: white;
+            border: 3px solid black;
+            padding: 0.5rem 1.5rem;
+            font-size: 1.2rem;
+            letter-spacing: 1px;
+            transform: skew(-5deg);
+            box-shadow: 5px 5px 0 black;
+            transition: all 0.2s;
+        }
+        
+        .comic-button:hover {
+            transform: skew(-5deg) translateY(-3px);
+            box-shadow: 8px 8px 0 black;
+        }
+        
+        .comic-button:active {
+            transform: skew(-5deg) translateY(0);
+            box-shadow: 3px 3px 0 black;
+        }
+        
+        .halftone {
+            background-image: radial-gradient(circle, black 1px, transparent 1px);
+            background-size: 8px 8px;
+            background-repeat: repeat;
+            mix-blend-mode: multiply;
+            opacity: 0.2;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            pointer-events: none;
+        }
+        
+        .motion-lines {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: repeating-linear-gradient(
+                -45deg,
+                transparent,
+                transparent 10px,
+                black 10px,
+                black 20px
+            );
+            opacity: 0.1;
+            pointer-events: none;
+        }
+        
+        .character {
+            transition: all 0.3s ease-out;
+        }
+        
+        .character:hover {
+            transform: translateY(-10px) rotate(5deg);
+        }
+        
+        .comic-strip {
+            display: flex;
+            overflow-x: auto;
+            padding: 1rem 0;
+            gap: 1rem;
+            scroll-snap-type: x mandatory;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            
+        }
+        
+        .comic-strip-panel {
+            flex: 0 0 80%;
+            scroll-snap-align: start;
+        }
+        
+        .benday-dots {
+            background-image: radial-gradient(circle, black 1px, transparent 1px);
+            background-size: 4px 4px;
+            mix-blend-mode: multiply;
+            opacity: 0.3;
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        
+        /* Glitch effects */
+        .glitch {
+            position: relative;
+        }
+        
+        .glitch::before,
+        .glitch::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: white;
+        }
+        
+        .glitch::before {
+            left: 2px;
+            text-shadow: -2px 0 red;
+            clip: rect(44px, 450px, 56px, 0);
+            animation: glitch-anim-1 2s infinite linear alternate-reverse;
+        }
+        
+        .glitch::after {
+            left: -2px;
+            text-shadow: -2px 0 blue;
+            clip: rect(44px, 450px, 56px, 0);
+            animation: glitch-anim-2 2s infinite linear alternate-reverse;
+        }
+        
+        @keyframes glitch-anim-1 {
+            0% {
+                clip: rect(32px, 9999px, 78px, 0);
+                transform: skew(0.5deg);
+            }
+            20% {
+                clip: rect(32px, 9999px, 78px, 0);
+                transform: skew(0.5deg);
+            }
+            21% {
+                clip: rect(62px, 9999px, 58px, 0);
+                transform: skew(0.9deg);
+            }
+            60% {
+                clip: rect(62px, 9999px, 58px, 0);
+                transform: skew(0.9deg);
+            }
+            61% {
+                clip: rect(12px, 9999px, 98px, 0);
+                transform: skew(0.2deg);
+            }
+            100% {
+                clip: rect(12px, 9999px, 98px, 0);
+                transform: skew(0.2deg);
+            }
+        }
+        
+        @keyframes glitch-anim-2 {
+            0% {
+                clip: rect(82px, 9999px, 98px, 0);
+                transform: skew(0.3deg);
+            }
+            30% {
+                clip: rect(82px, 9999px, 98px, 0);
+                transform: skew(0.3deg);
+            }
+            31% {
+                clip: rect(2px, 9999px, 38px, 0);
+                transform: skew(0.8deg);
+            }
+            60% {
+                clip: rect(2px, 9999px, 38px, 0);
+                transform: skew(0.8deg);
+            }
+            61% {
+                clip: rect(92px, 9999px, 18px, 0);
+                transform: skew(0.1deg);
+            }
+            100% {
+                clip: rect(92px, 9999px, 18px, 0);
+                transform: skew(0.1deg);
+            }
+        }
+        
+        .glitch-effect {
+            animation: glitch 0.8s linear infinite;
+        }
+        
+        @keyframes glitch {
+            0% {
+                transform: translate(0);
+                opacity: 1;
+            }
+            20% {
+                transform: translate(-5px, 5px);
+                opacity: 0.8;
+            }
+            40% {
+                transform: translate(-5px, -5px);
+                opacity: 0.6;
+            }
+            60% {
+                transform: translate(5px, 5px);
+                opacity: 0.4;
+            }
+            80% {
+                transform: translate(5px, -5px);
+                opacity: 0.2;
+            }
+            100% {
+                transform: translate(0);
+                opacity: 0;
+            }
+        }
+        
+        .glitch-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: black;
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            pointer-events: none;
+            opacity: 0;
+        }
+        
+        .glitch-text {
+            font-family: 'Bangers', cursive;
+            font-size: 4rem;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            position: relative;
+        }
+        
+        .glitch-text::before,
+        .glitch-text::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .glitch-text::before {
+            left: 2px;
+            text-shadow: -2px 0 red;
+            animation: glitch-anim-1 0.4s infinite linear alternate-reverse;
+        }
+        
+        .glitch-text::after {
+            left: -2px;
+            text-shadow: -2px 0 blue;
+            animation: glitch-anim-2 0.4s infinite linear alternate-reverse;
+        }
+        
+        .scanlines {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: repeating-linear-gradient(
+                to bottom,
+                transparent,
+                transparent 1px,
+                rgba(0,0,0,0.1) 1px,
+                rgba(0,0,0,0.1) 2px
+            );
+            pointer-events: none;
+        }
