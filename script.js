@@ -8,6 +8,8 @@
         });
 
         function startAdventure() {
+            document.getElementById('glitchAudio').play();
+
             const cover = document.getElementById('cover');
             const glitchTransition = document.getElementById('glitch-transition');
             

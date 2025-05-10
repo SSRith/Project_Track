@@ -20,10 +20,13 @@
         <div class="action-line mt-4"></div>
     </div>
     <!-- Glitch Transition Container -->
-    <div id="glitch-transition" class="glitch-container">
+    <div id="glitch-transition" class="glitch-container" onclick="document.getElementById('glitchAudio').play()">
         <div class="scanlines"></div>
         <div class="glitch-text" data-text="ACCESS GRANTED">ACCESS GRANTED</div>
     </div>
+
+            <!-- Add this audio element right after the glitch-transition div -->
+    <audio id="glitchAudio" src="spiderverse_meme_sound.mp3"></audio>
     
     <!-- Comic Book Cover -->
     <div id="cover" class="comic-panel min-h-screen flex flex-col items-center justify-center p-8 relative overflow-hidden">
