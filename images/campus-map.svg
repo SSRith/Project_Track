@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg1"
+   width="1545"
+   height="2000"
+   viewBox="0 0 1545 2000"
+   sodipodi:docname="campus-map.svg"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="1.147"
+     inkscape:cx="750.21796"
+     inkscape:cy="476.46033"
+     inkscape:window-width="2560"
+     inkscape:window-height="1361"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g1" />
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="Image"
+     id="g1">
+    <image
+       width="1545"
+       height="2000"
+       preserveAspectRatio="none"
+       xlink:href="../../../../../../../Downloads/campus-map-directory_apr_2025-web.pdf.jpg"
+       id="image1" />
+    <path
+       style="fill:#fff400;fill-opacity:0.40000001"
+       d="m 603.31299,353.09503 c 0.87184,74.10637 1.74368,76.72188 1.74368,76.72188 l 43.59198,-0.87184 -1.74368,-76.72188 z"
+       id="path1"
+       onmouseover="this.style.opacity=1"
+       onmouseout="this.style.opacity=0" />
+  </g>
+</svg>

@@ -99,3 +99,8 @@
                 });
             });
         });
+
+        //on click function
+        function showBuildingInfo(buildingName) {
+        alert("You clicked on: " + buildingName);
+        }
