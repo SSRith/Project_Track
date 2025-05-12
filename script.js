@@ -7,6 +7,12 @@
             }, 1500);
         });
 
+        
+
+        // Add this at the top of script.js
+        const typingSound = new Audio('typing_sound.mp3');
+
+        // Modify the startAdventure function
         function startAdventure() {
             const cover = document.getElementById('cover');
             const typingTransition = document.getElementById('typing-transition');
@@ -14,9 +20,11 @@
             // Show typing transition
             typingTransition.classList.remove('hidden');
             
-            // Start typing animation
+            // Start typing animation and sound
             setTimeout(() => {
                 typingTransition.classList.add('typing-animation');
+                typingSound.currentTime = 0; // Reset audio
+                typingSound.play(); // Start playing
                 
                 // After animation completes
                 setTimeout(() => {
@@ -24,10 +32,11 @@
                     document.getElementById('main-content').classList.remove('hidden');
                     showSection('map');
                     
-                    // Hide typing transition
+                    // Hide typing transition and stop sound
                     setTimeout(() => {
                         typingTransition.classList.remove('typing-animation');
                         typingTransition.classList.add('hidden');
+                        typingSound.pause();
                     }, 500);
                 }, 2600); // Matches animation duration
             }, 500);
