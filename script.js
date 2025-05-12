@@ -8,42 +8,29 @@
         });
 
         function startAdventure() {
-            document.getElementById('glitchAudio').play();
-
             const cover = document.getElementById('cover');
-            const glitchTransition = document.getElementById('glitch-transition');
+            const typingTransition = document.getElementById('typing-transition');
             
-            // Add glitch effect to cover
-            cover.classList.add('glitch-effect');
+            // Show typing transition
+            typingTransition.classList.remove('hidden');
             
-            // Show glitch transition screen
-            glitchTransition.style.opacity = '1';
-            
-            // Add scanlines effect
-            const scanlines = document.createElement('div');
-            scanlines.className = 'scanlines';
-            glitchTransition.appendChild(scanlines);
-            
-            // Random glitch effects during transition
-            const glitchInterval = setInterval(() => {
-                const randomX = Math.random() * 10 - 5;
-                const randomY = Math.random() * 10 - 5;
-                glitchTransition.style.transform = `translate(${randomX}px, ${randomY}px)`;
-            }, 50);
-            
+            // Start typing animation
             setTimeout(() => {
-                // Clear effects
-                clearInterval(glitchInterval);
-                cover.classList.add('hidden');
-                document.getElementById('main-content').classList.remove('hidden');
-                showSection('map');
+                typingTransition.classList.add('typing-animation');
                 
-                // Hide glitch transition
+                // After animation completes
                 setTimeout(() => {
-                    glitchTransition.style.opacity = '0';
-                    glitchTransition.style.transform = 'translate(0)';
-                }, 500);
-            }, 1500);
+                    cover.classList.add('hidden');
+                    document.getElementById('main-content').classList.remove('hidden');
+                    showSection('map');
+                    
+                    // Hide typing transition
+                    setTimeout(() => {
+                        typingTransition.classList.remove('typing-animation');
+                        typingTransition.classList.add('hidden');
+                    }, 500);
+                }, 2600); // Matches animation duration
+            }, 500);
         }
         
         function showSection(sectionId) {

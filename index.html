@@ -10,8 +10,21 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <script async type="text/javascript" src="script.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
-
 </head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <body class="min-h-screen">
     <!-- Loading Screen -->
     <div id="loadingScreen" class="fixed inset-0 bg-white flex flex-col items-center justify-center z-50">
@@ -19,14 +32,38 @@
         <h2 class="comic-font text-2xl text-black">UW TACOMA ADVENTURE</h2>
         <div class="action-line mt-4"></div>
     </div>
-    <!-- Glitch Transition Container -->
-    <div id="glitch-transition" class="glitch-container" onclick="document.getElementById('glitchAudio').play()">
-        <div class="scanlines"></div>
-        <div class="glitch-text" data-text="ACCESS GRANTED">ACCESS GRANTED</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- typing transition -->
+    <div id="typing-transition" class="typing-container hidden">
+        <div class="typing-text">ACCESS GRANTED</div>
+        <div class="terminal-cursor"></div>
     </div>
 
-            <!-- Add this audio element right after the glitch-transition div -->
-    <audio id="glitchAudio" src="spiderverse_meme_sound.mp3"></audio>
+
+
+
+
+
+
+
+
+
+
+
+
     
     <!-- Comic Book Cover -->
     <div id="cover" class="comic-panel min-h-screen flex flex-col items-center justify-center p-8 relative overflow-hidden">
@@ -67,6 +104,23 @@
             </div>
         </div>
     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
     <!-- Main Content (hidden until start) -->
     <div id="main-content" class="hidden">
@@ -379,6 +433,25 @@
             </div>
         </section>
         
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         <!-- Buildings Section -->
         <section id="buildings" class="p-8 hidden">
             <div class="comic-panel p-6 mb-8 relative">
@@ -782,6 +855,31 @@
             </div>
         </section>
         
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         <!-- Resources Section -->
         <section id="resources" class="p-8 hidden">
             <div class="comic-panel p-6 mb-8 relative">
@@ -883,6 +981,28 @@
             </div>
         </section>
         
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         <!-- Tips Section -->
         <section id="tips" class="p-8 hidden">
             <div class="comic-panel p-6 mb-8 relative">
@@ -984,6 +1104,26 @@
                 </div>
             </div>
         </section>
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         
         <!-- Footer -->
         <footer class="comic-panel p-6 bg-black text-white">
