@@ -104,3 +104,12 @@
         function showBuildingInfo(buildingName) {
         alert("You clicked on: " + buildingName);
         }
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('interactive-map.html')
+                .then(response => response.text())
+                .then(data => {
+                document.getElementById('map-container').innerHTML = data;
+                })
+                .catch(error => console.error('Error loading map:', error));
+        });
+
