@@ -9,6 +9,26 @@
 
         
 
+        // Custom cursor logic
+        const cursor = document.querySelector('.comic-cursor');
+        const cursorDot = document.querySelector('.comic-cursor-dot');
+
+        // Only enable on non-touch devices
+        if (!('ontouchstart' in window)) {
+            document.addEventListener('mousemove', (e) => {
+                cursor.style.left = e.clientX + 'px';
+                cursor.style.top = e.clientY + 'px';
+                cursorDot.style.left = e.clientX + 'px';
+                cursorDot.style.top = e.clientY + 'px';
+            });
+
+            // Hover effects
+            document.querySelectorAll('a, button, .comic-button, .gallery-item, .comic-panel').forEach(el => {
+                el.addEventListener('mouseenter', () => cursor.classList.add('active'));
+                el.addEventListener('mouseleave', () => cursor.classList.remove('active'));
+            });
+        }
+
         // Add this at the top of script.js
         const typingSound = new Audio('typing_sound.mp3');
 

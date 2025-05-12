@@ -376,3 +376,46 @@
             max-width: 800px;
             margin: 0 auto;
         }
+
+
+
+/* Comic Cursor */
+.comic-cursor {
+    width: 32px;
+    height: 32px;
+    border: 3px solid var(--highlight);
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    transition: 
+        transform 0.2s ease,
+        border-color 0.3s ease;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.comic-cursor.active {
+    transform: translate(-50%, -50%) scale(1.5);
+    border-color: var(--primary);
+    mix-blend-mode: difference;
+}
+
+.comic-cursor-dot {
+    width: 8px;
+    height: 8px;
+    background-color: var(--highlight);
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .comic-cursor,
+    .comic-cursor-dot {
+        display: block;
+    }
+}
