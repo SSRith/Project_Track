@@ -9,11 +9,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" type="text/css" href="style.css">
     <script async type="text/javascript" src="script.js"></script>
+    <script async type="text/javascript" src="script_Map.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
 
 </head>
 <body class="min-h-screen">
-    <!-- Loading Screen -->
     <div id="loadingScreen" class="fixed inset-0 bg-white flex flex-col items-center justify-center z-50">
         <div class="comic-loader mb-4"></div>
         <h2 class="comic-font text-2xl text-black">UW TACOMA ADVENTURE</h2>
@@ -213,9 +213,9 @@
                                 style="fill:#fff400;fill-opacity:0;transition: fill-opacity 0.2s ease;"
                                 d="m 1001.7437,633.82738 v 84.56844 l 225.8064,-1.74368 1.7437,-83.6966 z"
                                 id="path3" 
+                                onclick="showBuildingInfo('Court')"
                                 onmouseover="this.style.fillOpacity=0.4"
                                 onmouseout="this.style.fillOpacity=0"
-                                onmouseout="this.style.opacity=0"
                                 sodipodi:nodetypes="ccccc" />
                                 <path
                                 style="fill:#fff400;fill-opacity:0;transition: fill-opacity 0.2s ease;"
@@ -363,6 +363,13 @@
                                 sodipodi:nodetypes="ccccc" />
                             </g>
                             </svg>
+                            <!-- Side Panel -->
+                            <div id="buildingPanel" class="fixed top-0 right-0 w-80 h-full bg-white shadow-lg p-6 border-l-4 border-black z-50 transform translate-x-full transition-transform duration-300 ease-in-out">
+                                <button onclick="closeBuildingPanel()" class="comic-button mb-4">CLOSE</button>
+                                <h3 id="buildingTitle" class="comic-title text-xl mb-2">Building Name</h3>
+                                <p id="buildingDescription" class="text-sm">Description goes here...</p>
+                            </div>
+
                         </div>
                         <button class="comic-button mt-4">ZOOM IN</button>
                     </div>
