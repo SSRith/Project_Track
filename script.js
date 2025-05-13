@@ -8,6 +8,26 @@
         });
 
         
+        document.addEventListener('DOMContentLoaded', function() {
+            const progressBar = document.querySelector('.progress-inner');
+            let progress = 0;
+            
+            const fakeLoad = setInterval(() => {
+                progress += Math.random() * 10;
+                if(progress >= 100) {
+                    progress = 100;
+                    clearInterval(fakeLoad);
+                }
+                progressBar.style.width = progress + '%';
+            }, 150);
+
+            setTimeout(function() {
+                document.getElementById('loadingScreen').style.opacity = '0';
+                setTimeout(function() {
+                    document.getElementById('loadingScreen').style.display = 'none';
+                }, 1000);
+            }, 3000);
+        });
 
         // Custom cursor logic
         const cursor = document.querySelector('.comic-cursor');
