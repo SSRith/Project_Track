@@ -1,4 +1,8 @@
-        document.addEventListener('DOMContentLoaded', function() {
+
+       
+       
+       
+       document.addEventListener('DOMContentLoaded', function() {
             setTimeout(function() {
                 document.getElementById('loadingScreen').style.opacity = '0';
                 setTimeout(function() {
@@ -135,6 +139,9 @@
                 });
             });
         });
+
+
+        
 
         //on click function
         function showBuildingInfo(buildingName) {

@@ -11,14 +11,9 @@
     <script async type="text/javascript" src="script.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
 </head>
-
-
-
-
-
-
-
 
 
 
@@ -30,7 +25,7 @@
     <!-- loading screen -->
     <div id="loadingScreen" class="fixed inset-0 flex flex-col items-center justify-center z-50 bg-black/90">
         <!-- Game-style background -->
-        <div class="absolute inset-0 bg-[url('uwtacoma_readyplayerone.png')] bg-cover bg-center opacity-75"></div>
+        <div class="absolute inset-0 bg-[url('downtown_tacoma1.png')] bg-cover bg-center opacity-75"></div>
         
         <!-- CRT screen effect overlay -->
         <div class="absolute inset-0 bg-gradient-to-b from-black/40 to-[#9D00FF]/20 crt-effect"></div>
@@ -92,42 +87,24 @@
 
     
     <!-- Comic Book Cover -->
-    <div id="cover" class="comic-panel min-h-screen flex flex-col items-center justify-center p-8 relative overflow-hidden">
-        <div class="halftone"></div>
-        <div class="absolute inset-0 bg-gradient-to-b from-purple-900/10 to-yellow-800/10"></div>
-        
-        <h1 class="comic-title text-6xl md:text-8xl text-center mb-8">UW TACOMA</h1>
-        <h2 class="comic-title text-4xl md:text-6xl text-center mb-12">CAMPUS GUIDE</h2>
-        
-        <div class="relative w-64 h-64 mb-12">
-            <div class="absolute inset-0 bg-purple-900 rounded-full"></div>
-            <div class="absolute inset-4 bg-yellow-500 rounded-full flex items-center justify-center">
-                <span class="comic-title text-4xl">UWT</span>
-            </div>
-            <div class="absolute inset-0 rounded-full border-8 border-black"></div>
-            <div class="absolute -inset-4 rounded-full border-4 border-black opacity-20"></div>
+    <div id="cover" class="comic-panel min-h-screen flex flex-col items-center justify-end pb-32 p-8 relative overflow-hidden">
+        <!-- Background elements -->
+        <div class="absolute inset-0 bg-[url('downtown_tacoma2.png')] bg-cover bg-center opacity-90"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-black/20 to-[#9D00FF]/10 crt-effect"></div>
+
+        <!-- Text Container -->
+        <div class="relative z-10 text-center space-y-8 mb-12"> <!-- Increased mb-8 to mb-12 -->
+            <h2 class="comic-title text-yellow-400 text-6xl md:text-8xl animate-bounce">
+                FOR US, BY US!
+            </h2>
+            <p class="handwritten-byline tracking-wide">
+                TACOMA RESOURCES & ACADEMIC COMMUNITY KIT
+            </p>
         </div>
-        
-        <p class="text-xl md:text-2xl text-center mb-8 max-w-2xl mx-auto font-bold">Your Ultimate Guide to Navigating Campus Like a Superhero!</p>
-        
-        <button onclick="startAdventure()" class="comic-button mt-8 pulse">START ADVENTURE!</button>
-        
-        <div class="absolute bottom-8 left-8 w-32 h-32">
-            <div class="character">
-                <div class="w-16 h-24 bg-red-500 rounded-full absolute bottom-0 left-0 border-4 border-black"></div>
-                <div class="w-12 h-12 bg-blue-500 rounded-full absolute bottom-20 left-4 border-4 border-black"></div>
-                <div class="w-4 h-4 bg-white rounded-full absolute bottom-28 left-8 border-2 border-black"></div>
-                <div class="w-2 h-2 bg-black rounded-full absolute bottom-28 left-10"></div>
-            </div>
-        </div>
-        
-        <div class="absolute bottom-8 right-8 w-32 h-32">
-            <div class="character">
-                <div class="w-16 h-24 bg-green-500 rounded-full absolute bottom-0 right-0 border-4 border-black"></div>
-                <div class="w-12 h-12 bg-yellow-500 rounded-full absolute bottom-20 right-4 border-4 border-black"></div>
-                <div class="w-4 h-4 bg-white rounded-full absolute bottom-28 right-8 border-2 border-black"></div>
-                <div class="w-2 h-2 bg-black rounded-full absolute bottom-28 right-10"></div>
-            </div>
+
+        <!-- Start Button -->
+        <div class="relative z-10 text-center">
+            <button onclick="startAdventure()" class="comic-button pulse mb-8">START ADVENTURE!</button>
         </div>
     </div>
 
