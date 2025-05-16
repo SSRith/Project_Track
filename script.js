@@ -100,16 +100,57 @@
             });
         });
 
-        //on click function
-        function showBuildingInfo(buildingName) {
-        alert("You clicked on: " + buildingName);
-        }
-        document.addEventListener('DOMContentLoaded', () => {
-            fetch('interactive-map.html')
-                .then(response => response.text())
-                .then(data => {
-                document.getElementById('map-container').innerHTML = data;
-                })
-                .catch(error => console.error('Error loading map:', error));
-        });
+        // When the document is loaded, load the interactive map
+document.addEventListener('DOMContentLoaded', () => {
+    fetch('interactive-map.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('map-container').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading map:', error));
+});
+
+// Show building info inside side panel
+function showBuildingInfo(code) {
+  const panel = document.getElementById('side-panel');
+  const title = document.getElementById('buildingTitle');
+  const desc = document.getElementById('buildingDescription');
+  const img = document.getElementById('buildingImage');
+  const link = document.getElementById('learnMoreLink');
+
+  const buildings = {
+    BB: {
+      name: "Birmingham Block",
+      description: "Features classrooms, computer labs, and study spaces.",
+      image: "images/buildings/bb.jpg",
+      link: "#buildings"
+    },
+    JOY: {
+      name: "Russell T. Joy",
+      description: "Houses lecture halls and general classrooms.",
+      image: "images/buildings/joy.jpg",
+      link: "#buildings"
+    },
+    // Add more entries...
+  };
+
+  const data = buildings[code];
+
+  if (data) {
+    title.textContent = data.name;
+    desc.textContent = data.description;
+    img.src = data.image;
+    img.alt = data.name;
+    link.href = data.link;
+
+    panel.classList.add("open");
+  }
+}
+
+function closeSidePanel() {
+  const panel = document.getElementById('side-panel');
+  panel.classList.remove("open");
+}
+
+
 
