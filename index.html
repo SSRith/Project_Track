@@ -98,7 +98,8 @@
                 <p class="text-lg mb-4">Navigate the campus like a superhero with this interactive map!</p>
                 
                 <div class="flex-panel">
-                    <div class="comic-panel p-4">
+                    <div class="map-area comic-panel p-4">
+                        <h3 class="comic-title text-2xl mb-2">Interactive Map</h3>
                         <div id="map-container"></div> 
                     </div>
                     
@@ -121,7 +122,7 @@
                 <h2 class="comic-title text-4xl mb-4">CAMPUS BUILDINGS</h2>
                 <p class="text-lg mb-4">Each building has its own superpowers to help you succeed!</p>
                 
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div id="building-BB" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     <!-- Building 1 -->
                     <div class="comic-panel p-4 hover:scale-105 transition-transform">
                         <h3 class="comic-title text-2xl mb-2">Birmingham Block (BB)</h3>
@@ -140,7 +141,7 @@
                     </div>
                     
                     <!-- Building 2 -->
-                    <div class="comic-panel p-4 hover:scale-105 transition-transform">
+                    <div id="building-BHS" class="comic-panel p-4 hover:scale-105 transition-transform">
                         <h3 class="comic-title text-2xl mb-2">Birmingham Hay & Seed (BHS)</h3>
                         <div class="w-full h-40 bg-yellow-100 mb-2 relative overflow-hidden">
                             <div class="absolute bottom-0 left-0 w-full h-24 bg-yellow-600"></div>
@@ -157,7 +158,7 @@
                     </div>
                     
                     <!-- Building 3 -->
-                    <div class="comic-panel p-4 hover:scale-105 transition-transform">
+                    <div id="building-CP" class="comic-panel p-4 hover:scale-105 transition-transform">
                         <h3 class="comic-title text-2xl mb-2">Cherry Parkes (CP)</h3>
                         <div class="w-full h-40 bg-blue-100 mb-2 relative overflow-hidden">
                             <div class="absolute bottom-0 left-0 w-full h-32 bg-blue-800"></div>
@@ -174,7 +175,7 @@
                     </div>
                     
                     <!-- Building 4 -->
-                    <div class="comic-panel p-4 hover:scale-105 transition-transform">
+                    <div id="building-Court17" class="comic-panel p-4 hover:scale-105 transition-transform">
                         <h3 class="comic-title text-2xl mb-2">Court 17 Student Housing</h3>
                         <div class="w-full h-40 bg-green-100 mb-2 relative overflow-hidden">
                             <div class="absolute bottom-0 left-0 w-full h-24 bg-green-800"></div>
@@ -191,7 +192,7 @@
                     </div>
                     
                     <!-- Building 5 -->
-                    <div class="comic-panel p-4 hover:scale-105 transition-transform">
+                    <div id="building-DOU" class="comic-panel p-4 hover:scale-105 transition-transform">
                         <h3 class="comic-title text-2xl mb-2">Dougan (DOU)</h3>
                         <div class="w-full h-40 bg-red-100 mb-2 relative overflow-hidden">
                             <div class="absolute bottom-0 left-0 w-full h-32 bg-red-800"></div>
@@ -208,7 +209,7 @@
                     </div>
                     
                     <!-- Building 6 -->
-                    <div class="comic-panel p-4 hover:scale-105 transition-transform">
+                    <div id="building-GWP" class="comic-panel p-4 hover:scale-105 transition-transform">
                         <h3 class="comic-title text-2xl mb-2">Garretson Woodruff & Pratt (GWP)</h3>
                         <div class="w-full h-40 bg-indigo-100 mb-2 relative overflow-hidden">
                             <div class="absolute bottom-0 left-0 w-full h-24 bg-indigo-800"></div>
@@ -225,7 +226,7 @@
                     </div>
 
                     <!-- Building 7 -->
-                    <div class="comic-panel p-4 hover:scale-105 transition-transform">
+                    <div id="building-HAR" class="comic-panel p-4 hover:scale-105 transition-transform">
                         <h3 class="comic-title text-2xl mb-2">Harmon (HAR)</h3>
                         <div class="w-full h-40 bg-red-100 mb-2 relative overflow-hidden">
                             <div class="absolute bottom-0 left-0 w-full h-32 bg-red-800"></div>
@@ -242,7 +243,7 @@
                     </div>
 
                     <!-- Building 8 -->
-                    <div class="comic-panel p-4 hover:scale-105 transition-transform">
+                    <div id="building-JOY" class="comic-panel p-4 hover:scale-105 transition-transform">
                         <h3 class="comic-title text-2xl mb-2">Russell T. Joy (JOY)</h3>
                         <div class="w-full h-40 bg-red-100 mb-2 relative overflow-hidden">
                             <div class="absolute bottom-0 left-0 w-full h-32 bg-red-800"></div>
@@ -259,7 +260,7 @@
                     </div>
 
                     <!-- Building 9 -->
-                    <div class="comic-panel p-4 hover:scale-105 transition-transform">
+                    <div id="building-KEY" class="comic-panel p-4 hover:scale-105 transition-transform">
                         <h3 class="comic-title text-2xl mb-2">Keystone (KEY)</h3>
                         <div class="w-full h-40 bg-red-100 mb-2 relative overflow-hidden">
                             <div class="absolute bottom-0 left-0 w-full h-32 bg-red-800"></div>
@@ -276,7 +277,7 @@
                     </div>
 
                     <!-- Building 10 -->
-                    <div class="comic-panel p-4 hover:scale-105 transition-transform">
+                    <div id="building-LAB" class="comic-panel p-4 hover:scale-105 transition-transform">
                         <h3 class="comic-title text-2xl mb-2">Laborers Hall</h3>
                         <div class="w-full h-40 bg-red-100 mb-2 relative overflow-hidden">
                             <div class="absolute bottom-0 left-0 w-full h-32 bg-red-800"></div>
@@ -293,7 +294,7 @@
                     </div>
 
                     <!-- Building 11 -->
-                    <div class="comic-panel p-4 hover:scale-105 transition-transform">
+                    <div id="building-MAT" class="comic-panel p-4 hover:scale-105 transition-transform">
                         <h3 class="comic-title text-2xl mb-2">Mattress Factory (MAT)</h3>
                         <div class="w-full h-40 bg-red-100 mb-2 relative overflow-hidden">
                             <div class="absolute bottom-0 left-0 w-full h-32 bg-red-800"></div>
@@ -310,7 +311,7 @@
                     </div>
 
                     <!-- Building 12 -->
-                    <div class="comic-panel p-4 hover:scale-105 transition-transform">
+                    <div id="building-MDS" class="comic-panel p-4 hover:scale-105 transition-transform">
                         <h3 class="comic-title text-2xl mb-2">McDonald Smith (MDS)</h3>
                         <div class="w-full h-40 bg-red-100 mb-2 relative overflow-hidden">
                             <div class="absolute bottom-0 left-0 w-full h-32 bg-red-800"></div>
@@ -327,7 +328,7 @@
                     </div>
 
                     <!-- Building 13 -->
-                    <div class="comic-panel p-4 hover:scale-105 transition-transform">
+                    <div id="building-MLG" class="comic-panel p-4 hover:scale-105 transition-transform">
                         <h3 class="comic-title text-2xl mb-2">Milgard Hall (MLG)</h3>
                         <div class="w-full h-40 bg-red-100 mb-2 relative overflow-hidden">
                             <div class="absolute bottom-0 left-0 w-full h-32 bg-red-800"></div>
@@ -344,7 +345,7 @@
                     </div>
 
                     <!-- Building 14 -->
-                    <div class="comic-panel p-4 hover:scale-105 transition-transform">
+                    <div id="building-WPH" class="comic-panel p-4 hover:scale-105 transition-transform">
                         <h3 class="comic-title text-2xl mb-2">William W. Philip Hall (WPH)</h3>
                         <div class="w-full h-40 bg-red-100 mb-2 relative overflow-hidden">
                             <div class="absolute bottom-0 left-0 w-full h-32 bg-red-800"></div>
@@ -361,7 +362,7 @@
                     </div>
 
                     <!-- Building 15 -->
-                    <div class="comic-panel p-4 hover:scale-105 transition-transform">
+                    <div id="building-PNK" class="comic-panel p-4 hover:scale-105 transition-transform">
                         <h3 class="comic-title text-2xl mb-2">Pinkerton (PNK)</h3>
                         <div class="w-full h-40 bg-red-100 mb-2 relative overflow-hidden">
                             <div class="absolute bottom-0 left-0 w-full h-32 bg-red-800"></div>
@@ -378,7 +379,7 @@
                     </div>
 
                     <!-- Building 16 -->
-                    <div class="comic-panel p-4 hover:scale-105 transition-transform">
+                    <div id="building-SCI" class="comic-panel p-4 hover:scale-105 transition-transform">
                         <h3 class="comic-title text-2xl mb-2">Science (SCI)</h3>
                         <div class="w-full h-40 bg-red-100 mb-2 relative overflow-hidden">
                             <div class="absolute bottom-0 left-0 w-full h-32 bg-red-800"></div>
@@ -395,7 +396,7 @@
                     </div>
 
                     <!-- Building 17 -->
-                    <div class="comic-panel p-4 hover:scale-105 transition-transform">
+                    <div id="building-SNO" class="comic-panel p-4 hover:scale-105 transition-transform">
                         <h3 class="comic-title text-2xl mb-2">Snoqualmie Building (SNO)</h3>
                         <div class="w-full h-40 bg-red-100 mb-2 relative overflow-hidden">
                             <div class="absolute bottom-0 left-0 w-full h-32 bg-red-800"></div>
@@ -412,7 +413,7 @@
                     </div>
 
                     <!-- Building 18 -->
-                    <div class="comic-panel p-4 hover:scale-105 transition-transform">
+                    <div id="building-TPS" class="comic-panel p-4 hover:scale-105 transition-transform">
                         <h3 class="comic-title text-2xl mb-2">Tacoma Paper & Stationery (TPS)</h3>
                         <div class="w-full h-40 bg-red-100 mb-2 relative overflow-hidden">
                             <div class="absolute bottom-0 left-0 w-full h-32 bg-red-800"></div>
@@ -429,7 +430,7 @@
                     </div>
 
                     <!-- Building 19 -->
-                    <div class="comic-panel p-4 hover:scale-105 transition-transform">
+                    <div id="building-TLB" class="comic-panel p-4 hover:scale-105 transition-transform">
                         <h3 class="comic-title text-2xl mb-2">Tioga Library Building (TLB)</h3>
                         <div class="w-full h-40 bg-red-100 mb-2 relative overflow-hidden">
                             <div class="absolute bottom-0 left-0 w-full h-32 bg-red-800"></div>
@@ -446,7 +447,7 @@
                     </div>
 
                     <!-- Building 20 -->
-                    <div class="comic-panel p-4 hover:scale-105 transition-transform">
+                    <div id="building-UWY" class="comic-panel p-4 hover:scale-105 transition-transform">
                         <h3 class="comic-title text-2xl mb-2">University Y Student Center (UWY)</h3>
                         <div class="w-full h-40 bg-red-100 mb-2 relative overflow-hidden">
                             <div class="absolute bottom-0 left-0 w-full h-32 bg-red-800"></div>
@@ -463,7 +464,7 @@
                     </div>
 
                     <!-- Building 21 -->
-                    <div class="comic-panel p-4 hover:scale-105 transition-transform">
+                    <div id="building-WG" class="comic-panel p-4 hover:scale-105 transition-transform">
                         <h3 class="comic-title text-2xl mb-2">Walsh Gardner (WG)</h3>
                         <div class="w-full h-40 bg-red-100 mb-2 relative overflow-hidden">
                             <div class="absolute bottom-0 left-0 w-full h-32 bg-red-800"></div>
@@ -480,7 +481,7 @@
                     </div>
 
                     <!-- Building 22 -->
-                    <div class="comic-panel p-4 hover:scale-105 transition-transform">
+                    <div id="building-WCG" class="comic-panel p-4 hover:scale-105 transition-transform">
                         <h3 class="comic-title text-2xl mb-2">West Coast Grocery (WCG)</h3>
                         <div class="w-full h-40 bg-red-100 mb-2 relative overflow-hidden">
                             <div class="absolute bottom-0 left-0 w-full h-32 bg-red-800"></div>
@@ -498,7 +499,7 @@
 
 
                     <!-- Building 23 -->
-                    <div class="comic-panel p-4 hover:scale-105 transition-transform">
+                    <div id="building-WHT" class="comic-panel p-4 hover:scale-105 transition-transform">
                         <h3 class="comic-title text-2xl mb-2">The Whitney (WHT)</h3>
                         <div class="w-full h-40 bg-red-100 mb-2 relative overflow-hidden">
                             <div class="absolute bottom-0 left-0 w-full h-32 bg-red-800"></div>
