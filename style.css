@@ -3,7 +3,12 @@
             --secondary: #E8E3D3; /* UW Cream */
             --accent: #85754D; /* UW Gold */
             --highlight: #D22630; /* Comic red */
+            --highlight: #D22630;  /* Red used for main cursor border */
+            --splash1: #9D00FF;    /* Purple used for inner dot */
+            --splash2: #00C2FF;    /* Blue used for trailing dot */
         }
+
+        
 
         .action-line {
             transform-origin: left center;
@@ -285,38 +290,64 @@
 
 
 
-/* Comic Cursor */
+/*  Comic Cursor */
 .comic-cursor {
-    width: 32px;
-    height: 32px;
+    width: 40px;
+    height: 40px;
     border: 3px solid var(--highlight);
     border-radius: 50%;
     position: fixed;
     pointer-events: none;
     z-index: 9999;
     transition: 
-        transform 0.2s ease,
-        border-color 0.3s ease;
+        transform 0.15s ease,
+        border-color 0.3s ease,
+        width 0.2s ease,
+        height 0.2s ease;
     transform: translate(-50%, -50%);
     display: none;
+    mix-blend-mode: exclusion;
+}
+
+.comic-cursor::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: var(--splash1);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.2s ease;
 }
 
 .comic-cursor.active {
     transform: translate(-50%, -50%) scale(1.5);
-    border-color: var(--primary);
-    mix-blend-mode: difference;
+    border-color: var(--splash1);
+    border-width: 4px;
+}
+
+.comic-cursor.active::before {
+    background-color: var(--highlight);
+    width: 15px;
+    height: 15px;
+    animation: pulseInner 1s infinite alternate;
 }
 
 .comic-cursor-dot {
-    width: 8px;
-    height: 8px;
-    background-color: var(--highlight);
+    width: 10px;
+    height: 10px;
+    background-color: var(--splash2);
     border-radius: 50%;
     position: fixed;
     pointer-events: none;
     z-index: 9999;
     transform: translate(-50%, -50%);
     display: none;
+    mix-blend-mode: exclusion;
+    transition: all 0.05s ease;
+    box-shadow: 0 0 5px rgba(0, 194, 255, 0.5);
 }
 
 @media (min-width: 768px) {
