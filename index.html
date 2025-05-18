@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UW Tacoma Campus Guide | Comic Style</title>
+    <title>TRACK | TACOMA RESOURCES & ACADEMIC COMMUNITY KIT</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -145,7 +145,7 @@
                 </div>
             </div>
             <div class="flex gap-4">
-                <button onclick="showSection('map')" class="comic-button">MAP</button>
+                <button onclick="showSection('map')" class="comic-button">PLAZA</button>
                 <button onclick="showSection('buildings')" class="comic-button">BUILDINGS</button>
                 <button onclick="showSection('resources')" class="comic-button">RESOURCES</button>
                 <button onclick="showSection('tips')" class="comic-button">TIPS</button>
@@ -157,50 +157,62 @@
         <section id="map" class="p-8">
             <div class="comic-panel p-6 mb-8 relative">
                 <div class="halftone"></div>
-                <h2 class="comic-title text-4xl mb-4">CAMPUS MAP</h2>
-                <p class="text-lg mb-4">Navigate the campus like a superhero with this interactive map!</p>
                 
-                <div class="comic-strip mb-8">
-                    <div class="comic-strip-panel comic-panel p-4">
-                        <h3 class="comic-title text-2xl mb-2">Main Plaza</h3>
-                        <!-- <div>
-                            <img src="images/campus-map.jpg" alt="UW Tacoma Campus Map" class="w-full h-auto rounded shadow-lg border-4 border-black" />
-                        </div> -->
-                        <!-- <div class="w-full h-48 bg-gray-200 mb-2 relative overflow-hidden">
-                            <div class="absolute inset-0 flex items-center justify-center">
-                                <div class="w-32 h-32 bg-purple-800 rounded-full"></div>
-                                <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white comic-title">UWT</div>
-                            </div>
-                        </div> -->
-                        <p>The heart of campus where all paths cross!</p>
-                    </div>
-                    
-                    <div class="comic-strip-Panel comic-panel p-4">
-                        <h3 class="comic-title text-2xl mb-2">Library</h3>
-                        <div class="w-full h-48 bg-gray-200 mb-2 relative overflow-hidden">
-                            <div class="absolute inset-0 flex items-center justify-center">
-                                <div class="w-32 h-24 bg-yellow-600"></div>
-                                <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-black comic-title">LIB</div>
+        <!-- Welcome Section -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="comic-panel md:col-span-2 p-4 mb-12">
+                    <h2 class="comic-title text-4xl mb-4">MAIN PLAZA</h2>
+                    <div class="border-t-4 border-black w-6/7 mx-auto my-4"></div>
+                    <h3 class="comic-title text-4xl mb-4 text-[#4B2E83]">WELCOME TO UW TACOMA!</h3>
+                    <div class="flex flex-col md:flex-row items-center gap-6">
+                        <div class="flex-1">
+                            <p class="text-xl mb-4">
+                                Ready for your journey? This campus is your training ground! 
+                                Explore historic buildings transformed into modern learning spaces, 
+                                find hidden study spots, and discover all the resources you need to succeed.
+                            </p>
+                            <br>
+                            <div class="space-y-2">
+                                <div class="flex items-center gap-2">
+                                    <div class="w-8 h-8 bg-[#4B2E83] rounded-full flex items-center justify-center text-white">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    <span>Use the interactive map to familiarize yourself with the campus!</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <div class="w-8 h-8 bg-[#4B2E83] rounded-full flex items-center justify-center text-white">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    <span>Ask for help - Huskies support each other!</span>
+                                </div>
                             </div>
                         </div>
-                        <p>Your knowledge fortress with all the study tools!</p>
-                    </div>
-                    
-                    <div class="comic-strip-panel comic-panel p-4">
-                        <h3 class="comic-title text-2xl mb-2">Dawg House</h3>
-                        <div class="w-full h-48 bg-gray-200 mb-2 relative overflow-hidden">
-                            <div class="absolute inset-0 flex items-center justify-center">
-                                <div class="w-32 h-20 bg-red-600"></div>
-                                <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white comic-title">EATS</div>
+                        <!-- This panel stays in its original position -->
+                        <div class="comic-panel p-4 bg-yellow-100 flex-1">
+                            <div class="text-center">
+                                <div class="text-6xl mb-4">🗺️</div>
+                                <h4 class="comic-title text-2xl mb-2">YOUR ADVENTURE STARTS HERE!</h4>
+                                <p><strong>Discover:</strong></p>
+                                <ul class="list-disc pl-5 mt-2">
+                                    <li>24/7 Study Spaces</li>
+                                    <li>Student Support Services</li>
+                                    <li>Campus Dining Spots</li>
+                                    <li>Hidden Courtyards</li>
+                                </ul>
                             </div>
                         </div>
-                        <p>Refuel with delicious campus food!</p>
                     </div>
                 </div>
+            </div>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div class="comic-panel p-4">
                         <h3 class="comic-title text-2xl mb-2">Interactive Map</h3>
+                        <div class="border-t-4 border-black w-6/7 mx-auto my-4"></div>
                         <div class="interactive-map">
                             <svg
                             class="w-full h-auto"
@@ -432,6 +444,7 @@
                     
                     <div class="comic-panel p-4">
                         <h3 class="comic-title text-2xl mb-2">Scavenger Hunt</h3>
+                        <div class="border-t-4 border-black w-6/7 mx-auto my-4"></div>
                         <div class="speech-bubble mb-4">
                             <p>"Hey new student! Want to familiarize yourself with the campus? Play this Game!"</p>
                         </div>

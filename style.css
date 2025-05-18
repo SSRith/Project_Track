@@ -132,6 +132,7 @@
             transition: all 0.2s;
         }
         
+        
         .comic-button:hover {
             transform: skew(-5deg) translateY(-3px);
             box-shadow: 8px 8px 0 black;
@@ -141,6 +142,7 @@
             transform: skew(-5deg) translateY(0);
             box-shadow: 3px 3px 0 black;
         }
+        
         
         .halftone {
             background-image: radial-gradient(circle, black 1px, transparent 1px);
@@ -236,7 +238,7 @@
 }
 
 .typing-text {
-    color: #9D00FF;
+    color: #4B2E83;
     font-size: 3rem;
     text-transform: uppercase;
     overflow: hidden;
@@ -249,7 +251,7 @@
     display: inline-block;
     width: 3px;
     height: 3rem;
-    background: #9D00FF;
+    background: #4B2E83;
     margin-left: 4px;
     animation: blink 1s step-end infinite;
 }
@@ -401,7 +403,7 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    border: 4px solid #9D00FF;
+    border: 4px solid #4B2E83;
     border-top-color: transparent;
     border-radius: 50%; /* Makes it circular */
     animation: pixel-spin 1.5s linear infinite;
@@ -419,14 +421,14 @@
     letter-spacing: 3px;
     -webkit-text-stroke: 0;
     text-stroke: 0;
-    color: #9D00FF;
+    color: #4B2E83;
 }
 
 .pixel-cursor {
     display: inline-block;
     width: 8px;
     height: 16px;
-    background: #9D00FF;
+    background: #4B2E83;
     margin-left: 4px;
     animation: pixel-blink 0.8s steps(1) infinite;
 }
@@ -442,7 +444,7 @@
 
 .progress-inner {
     transition: width 0.3s ease;
-    box-shadow: 0 0 8px #9D00FF;
+    box-shadow: 0 0 8px #4B2E83;
 }
 
 
