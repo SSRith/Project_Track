@@ -58,6 +58,9 @@
 
         // Modify the startAdventure function
         function startAdventure() {
+            document.getElementById('cover').classList.add('hidden');          // Hide cover
+            document.getElementById('earth-section').classList.add('hidden');  // Hide earth background
+            document.getElementById('main-content').classList.remove('hidden'); // Show main content
             const cover = document.getElementById('cover');
             const typingTransition = document.getElementById('typing-transition');
             

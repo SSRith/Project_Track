@@ -88,27 +88,36 @@
     
     <!-- Comic Book Cover -->
     <div id="cover" class="comic-panel min-h-screen flex flex-col items-center justify-end pb-32 p-8 relative overflow-hidden">
-        <!-- Background elements -->
-        <div class="absolute inset-0 bg-[url('downtown_tacoma2.png')] bg-cover bg-center opacity-90"></div>
-        <div class="absolute inset-0 bg-gradient-to-b from-black/20 to-[#9D00FF]/10 crt-effect"></div>
+    <!-- Background elements -->
+    <div class="absolute inset-0 bg-[url('downtown_tacoma2.png')] bg-cover bg-center opacity-90"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-black/20 to-[#9D00FF]/10 crt-effect"></div>
+    <!-- Text Container -->
+    <div class="relative z-10 text-center space-y-8 mb-12">
+        <h2 class="comic-title text-yellow-400 text-6xl md:text-8xl animate-bounce">
+        FOR US, BY US!
+        </h2>
+        <p class="handwritten-byline tracking-wide">
+        TACOMA RESOURCES & ACADEMIC COMMUNITY KIT
+        </p>
+    </div>
+    <!-- Start Button -->
+    <div class="relative z-10 text-center">
+        <button onclick="startAdventure()" class="comic-button pulse mb-8">START ADVENTURE!</button>
+    </div>
+    </div>
 
-        <!-- Text Container -->
-        <div class="relative z-10 text-center space-y-8 mb-12"> <!-- Increased mb-8 to mb-12 -->
-            <h2 class="comic-title text-yellow-400 text-6xl md:text-8xl animate-bounce">
-                FOR US, BY US!
-            </h2>
-            <p class="handwritten-byline tracking-wide">
-                TACOMA RESOURCES & ACADEMIC COMMUNITY KIT
-            </p>
-        </div>
-
-        <!-- Start Button -->
-        <div class="relative z-10 text-center">
-            <button onclick="startAdventure()" class="comic-button pulse mb-8">START ADVENTURE!</button>
-        </div>
+    <!-- Earth section (only visible on home page) -->
+    <div id="earth-section" class="min-h-screen flex flex-col items-center justify-center relative">
+        <div class="absolute inset-0 bg-[url('earth.png')] bg-cover bg-center"></div>
     </div>
 
 
+
+
+    
+
+
+    
 
 
 
@@ -192,7 +201,7 @@
                             </div>
                         </div>
                         <!-- This panel stays in its original position -->
-                        <div class="comic-panel p-4 bg-yellow-100 flex-1">
+                        <div class="comic-panel p-4 bg-[#FFDE00] flex-1">
                             <div class="text-center">
                                 <div class="text-6xl mb-4">🗺️</div>
                                 <h4 class="comic-title text-2xl mb-2">YOUR ADVENTURE STARTS HERE!</h4>
