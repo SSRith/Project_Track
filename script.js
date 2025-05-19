@@ -144,14 +144,14 @@
         });
 
 // When the document is loaded, load the interactive map
-document.addEventListener('DOMContentLoaded', () => {
-    fetch('interactive-map.html')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('map-container').innerHTML = data;
-        })
-        .catch(error => console.error('Error loading map:', error));
-});
+// document.addEventListener('DOMContentLoaded', () => {
+//     fetch('interactive-map.html')
+//         .then(response => response.text())
+//         .then(data => {
+//             document.getElementById('map-container').innerHTML = data;
+//         })
+//         .catch(error => console.error('Error loading map:', error));
+// });
 
 // Show building info inside side panel
 function showBuildingInfo(code) {
