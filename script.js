@@ -142,16 +142,31 @@
                 });
             });
         });
+// fetching each html files to index
+const loads = [
+  { id: 'loadingScreen', file: 'partials/loading-screen.html' },
+  { id: 'glitch-transition', file: 'partials/glitch-transition.html' },
+  { id: 'typing-transition', file: 'partials/typing-transition.html' },
+  { id: 'cover', file: 'partials/cover.html' },
+  { id: 'nav-placeholder', file: 'partials/navigation.html' },
+  { id: 'map-intro-placeholder', file: 'partials/map-intro.html' },
+  { id: 'interactive-map-placeholder', file: 'partials/interactive-map.html' }, // ✅
+  { id: 'scavenger-placeholder', file: 'partials/scavenger-hunt.html' },
+  { id: 'buildings-placeholder', file: 'partials/buildings.html' },
+  { id: 'resources-placeholder', file: 'partials/resources.html' },
+  { id: 'tips-placeholder', file: 'partials/tips.html' },
+  { id: 'footer-placeholder', file: 'partials/footer.html' }
+];
 
-// When the document is loaded, load the interactive map
-// document.addEventListener('DOMContentLoaded', () => {
-//     fetch('interactive-map.html')
-//         .then(response => response.text())
-//         .then(data => {
-//             document.getElementById('map-container').innerHTML = data;
-//         })
-//         .catch(error => console.error('Error loading map:', error));
-// });
+loads.forEach(({ id, file }) => {
+  fetch(file)
+    .then(res => res.text())
+    .then(html => {
+      const container = document.getElementById(id);
+      if (container) container.outerHTML = html;
+    });
+});
+
 
 // Show building info inside side panel
 function showBuildingInfo(code) {
