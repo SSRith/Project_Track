@@ -143,7 +143,7 @@
             });
         });
 
-        // When the document is loaded, load the interactive map
+// When the document is loaded, load the interactive map
 document.addEventListener('DOMContentLoaded', () => {
     fetch('interactive-map.html')
         .then(response => response.text())
