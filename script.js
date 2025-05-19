@@ -12,7 +12,6 @@
         });
 
 
-        function startAdventure() {
         document.addEventListener('DOMContentLoaded', function() {
             const progressBar = document.querySelector('.progress-inner');
             let progress = 0;
@@ -33,7 +32,7 @@
                 }, 1000);
             }, 3000);
         });
-
+      
         // Custom cursor logic
         const cursor = document.querySelector('.comic-cursor');
         const cursorDot = document.querySelector('.comic-cursor-dot');
