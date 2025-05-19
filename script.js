@@ -1,4 +1,8 @@
-        document.addEventListener('DOMContentLoaded', function() {
+
+       
+       
+       
+       document.addEventListener('DOMContentLoaded', function() {
             setTimeout(function() {
                 document.getElementById('loadingScreen').style.opacity = '0';
                 setTimeout(function() {
@@ -7,43 +11,83 @@
             }, 1500);
         });
 
-        function startAdventure() {
-            // document.getElementById('glitchAudio').play();
 
+        function startAdventure() {
+        document.addEventListener('DOMContentLoaded', function() {
+            const progressBar = document.querySelector('.progress-inner');
+            let progress = 0;
+            
+            const fakeLoad = setInterval(() => {
+                progress += Math.random() * 10;
+                if(progress >= 100) {
+                    progress = 100;
+                    clearInterval(fakeLoad);
+                }
+                progressBar.style.width = progress + '%';
+            }, 150);
+
+            setTimeout(function() {
+                document.getElementById('loadingScreen').style.opacity = '0';
+                setTimeout(function() {
+                    document.getElementById('loadingScreen').style.display = 'none';
+                }, 1000);
+            }, 3000);
+        });
+
+        // Custom cursor logic
+        const cursor = document.querySelector('.comic-cursor');
+        const cursorDot = document.querySelector('.comic-cursor-dot');
+
+        // Only enable on non-touch devices
+        if (!('ontouchstart' in window)) {
+            document.addEventListener('mousemove', (e) => {
+                cursor.style.left = e.clientX + 'px';
+                cursor.style.top = e.clientY + 'px';
+                cursorDot.style.left = e.clientX + 'px';
+                cursorDot.style.top = e.clientY + 'px';
+            });
+
+            // Hover effects
+            document.querySelectorAll('a, button, .comic-button, .gallery-item, .comic-panel').forEach(el => {
+                el.addEventListener('mouseenter', () => cursor.classList.add('active'));
+                el.addEventListener('mouseleave', () => cursor.classList.remove('active'));
+            });
+        }
+
+        // Add this at the top of script.js
+        const typingSound = new Audio('typing_sound.mp3');
+
+        // Modify the startAdventure function
+        function startAdventure() {
+            document.getElementById('cover').classList.add('hidden');          // Hide cover
+            document.getElementById('earth-section').classList.add('hidden');  // Hide earth background
+            document.getElementById('main-content').classList.remove('hidden'); // Show main content
             const cover = document.getElementById('cover');
-            const glitchTransition = document.getElementById('glitch-transition');
+            const typingTransition = document.getElementById('typing-transition');
             
-            // Add glitch effect to cover
-            cover.classList.add('glitch-effect');
+            // Show typing transition
+            typingTransition.classList.remove('hidden');
             
-            // Show glitch transition screen
-            glitchTransition.style.opacity = '1';
-            
-            // Add scanlines effect
-            const scanlines = document.createElement('div');
-            scanlines.className = 'scanlines';
-            glitchTransition.appendChild(scanlines);
-            
-            // Random glitch effects during transition
-            const glitchInterval = setInterval(() => {
-                const randomX = Math.random() * 10 - 5;
-                const randomY = Math.random() * 10 - 5;
-                glitchTransition.style.transform = `translate(${randomX}px, ${randomY}px)`;
-            }, 50);
-            
+            // Start typing animation and sound
             setTimeout(() => {
-                // Clear effects
-                clearInterval(glitchInterval);
-                cover.classList.add('hidden');
-                document.getElementById('main-content').classList.remove('hidden');
-                showSection('map');
+                typingTransition.classList.add('typing-animation');
+                typingSound.currentTime = 0; // Reset audio
+                typingSound.play(); // Start playing
                 
-                // Hide glitch transition
+                // After animation completes
                 setTimeout(() => {
-                    glitchTransition.style.opacity = '0';
-                    glitchTransition.style.transform = 'translate(0)';
-                }, 500);
-            }, 1500);
+                    cover.classList.add('hidden');
+                    document.getElementById('main-content').classList.remove('hidden');
+                    showSection('map');
+                    
+                    // Hide typing transition and stop sound
+                    setTimeout(() => {
+                        typingTransition.classList.remove('typing-animation');
+                        typingTransition.classList.add('hidden');
+                        typingSound.pause();
+                    }, 500);
+                }, 2600); // Matches animation duration
+            }, 500);
         }
         
         function showSection(sectionId) {
@@ -278,6 +322,7 @@ function showBuildingInfo(code) {
         const target = document.getElementById("building-" + code);
         if (target) {
         target.scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" });
+
         }
     }, 300); // delay to match panel close animation
     };
