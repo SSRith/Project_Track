@@ -149,6 +149,7 @@ const loads = [
   { id: 'buildings-placeholder', file: 'partials/buildings.html' },
   { id: 'resources-placeholder', file: 'partials/resources.html' },
   { id: 'tips-placeholder', file: 'partials/tips.html' },
+  { id: 'socials-placeholder', file: 'partials/socials.html' },
   { id: 'footer-placeholder', file: 'partials/footer.html' }
 ];
 
