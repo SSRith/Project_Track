@@ -120,24 +120,23 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
     
-    // Add comic "sound effects" to buttons
-    const buttons = document.querySelectorAll('.comic-button');
-    buttons.forEach(button => {
-        button.addEventListener('click', () => {
-            const sounds = ['POW!', 'BAM!', 'ZAP!', 'BOOM!', 'WHAM!'];
-            const effect = document.createElement('div');
-            effect.className = 'action-line absolute';
-            effect.textContent = sounds[Math.floor(Math.random() * sounds.length)];
-            effect.style.left = `${Math.random() * 80 + 10}%`;
-            effect.style.top = `${Math.random() * 80 + 10}%`;
-            button.parentElement.appendChild(effect);
-            
-            setTimeout(() => {
-                effect.remove();
-            }, 1000);
+    // Add comic "sound effects"
+        document.addEventListener('click', (e) => {
+            if (e.target.classList.contains('comic-button')) {
+                const sounds = ['POW!', 'BAM!', 'ZAP!', 'BOOM!', 'WHAM!'];
+                const effect = document.createElement('div');
+                effect.className = 'action-line absolute';
+                effect.textContent = sounds[Math.floor(Math.random() * sounds.length)];
+                effect.style.left = `${Math.random() * 80 + 10}%`;
+                effect.style.top = `${Math.random() * 80 + 10}%`;
+                e.target.parentElement.appendChild(effect);
+                
+                setTimeout(() => {
+                    effect.remove();
+                }, 1000);
+            }
         });
     });
-});
 // fetching each html files to index
 const loads = [
   { id: 'loadingScreen', file: 'partials/loading-screen.html' },
