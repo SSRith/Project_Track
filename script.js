@@ -61,7 +61,7 @@ function startAdventure() {
                 typingTransition.classList.add('hidden');
                 typingSound.pause();
             }, 500);
-        }, 2600); // Matches animation duration
+        }, 1200); // Matches animation duration
     }, 500);
 }
 
