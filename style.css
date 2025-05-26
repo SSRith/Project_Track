@@ -28,7 +28,146 @@
         }
 
 
-        
+#earth-section {
+    overflow: hidden;
+}
+
+#earth-section .absolute {
+    transition: all 0.5s ease;
+}
+
+#earth-section:hover .absolute {
+    transform: scale(1.02);
+    filter: brightness(0.95);
+}
+
+#earth-section .absolute::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        45deg,
+        rgba(0,0,0,0.4) 0%,
+        rgba(75,46,131,0.2) 50%,
+        rgba(0,0,0,0.4) 100%
+    );
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+#earth-section:hover .absolute::after {
+    opacity: 1;
+}
+
+
+
+
+
+
+
+#balloon-section {
+    overflow: hidden;
+}
+
+#balloon-section .absolute {
+    transition: all 0.5s ease;
+}
+
+#balloon-section:hover .absolute {
+    transform: scale(1.02);
+    filter: brightness(0.95);
+}
+
+#balloon-section .absolute::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        45deg,
+        rgba(0,0,0,0.4) 0%,
+        rgba(75,46,131,0.2) 50%,
+        rgba(0,0,0,0.4) 100%
+    );
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+#balloon-section:hover .absolute::after {
+    opacity: 1;
+}
+
+
+
+
+
+#rainier-section {
+    overflow: hidden;
+}
+
+#rainier-section .absolute {
+    transition: all 0.5s ease;
+}
+
+#rainier-section:hover .absolute {
+    transform: scale(1.02);
+    filter: brightness(0.95);
+}
+
+#rainier-section .absolute::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        45deg,
+        rgba(0,0,0,0.4) 0%,
+        rgba(75,46,131,0.2) 50%,
+        rgba(0,0,0,0.4) 100%
+    );
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+#rainier-section:hover .absolute::after {
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+#earth-section {
+    overflow: hidden;
+}
+
+#earth-section .absolute {
+    transition: all 0.5s ease;
+}
+
+#earth-section:hover .absolute {
+    transform: scale(1.02);
+    filter: brightness(0.95);
+}
+
+#earth-section .absolute::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        45deg,
+        rgba(0,0,0,0.4) 0%,
+        rgba(75,46,131,0.2) 50%,
+        rgba(0,0,0,0.4) 100%
+    );
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+#earth-section:hover .absolute::after {
+    opacity: 1;
+}
 
         
         
@@ -548,7 +687,6 @@
         margin-top: -1rem;
     }
 }
-
 
 
 
