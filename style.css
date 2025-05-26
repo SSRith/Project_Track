@@ -135,39 +135,35 @@
 
 
 
-
-
-
-#earth-section {
-    overflow: hidden;
+/* Remove underline effect */
+.nav-item::after {
+    display: none !important;
 }
 
-#earth-section .absolute {
-    transition: all 0.5s ease;
+/* Update dot styling */
+.comic-nav-dot {
+    background: #f6db35;
+    border: none; /* Remove black border */
+    box-shadow: 0 0 8px rgba(255, 235, 59, 0.5);
 }
 
-#earth-section:hover .absolute {
-    transform: scale(1.02);
-    filter: brightness(0.95);
+.nav-item:hover .comic-nav-dot {
+    background: #f6db35;
+    transform: scale(1.2);
+    box-shadow: 0 0 12px rgba(255, 241, 118, 0.8);
 }
 
-#earth-section .absolute::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-        45deg,
-        rgba(0,0,0,0.4) 0%,
-        rgba(75,46,131,0.2) 50%,
-        rgba(0,0,0,0.4) 100%
-    );
-    opacity: 0;
-    transition: opacity 0.3s ease;
+/* Keep text styling */
+#side-nav .comic-nav-text {
+    color: #f6db35 !important;
 }
 
-#earth-section:hover .absolute::after {
-    opacity: 1;
+.nav-item:hover .comic-nav-text {
+    color: #f6db35 !important;
+                 2px 2px 0 rgba(0,0,0,0.3);
 }
+
+
 
         
         
@@ -659,6 +655,7 @@
     transform: scale(1.01);
     box-shadow: 12px 12px 0 rgba(0,0,0,0.3);
 }
+
 
 
 

@@ -35,6 +35,7 @@ const typingSound = new Audio('typing_sound.mp3');
 // Modify the startAdventure function
 function startAdventure() {
     document.getElementById('cover').classList.add('hidden');          // Hide cover
+    document.getElementById('side-nav').classList.add('hidden');          // Hide cover
     document.getElementById('earth-section').classList.add('hidden');  // Hide earth background
     document.getElementById('balloon-section').classList.add('hidden');  // Hide hot air balloon background
     document.getElementById('rainier-section').classList.add('hidden');  // Hide mount rainier background
