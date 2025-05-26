@@ -1,0 +1,43 @@
+<svg version="1.1" viewBox="0 0 1545 2000" xmlns="http://www.w3.org/2000/svg">
+ <g>
+  <path d="m645.16 323.45h43.592l0.87184 79.337-45.336-2.6155z" style="fill-opacity:.4;fill:#fff200"/>
+  <path d="m823.02 458.59 0.87183 88.928 46.208-0.87184-0.87184-89.799z" style="fill-opacity:.4;fill:#fff400"/>
+  <path d="m1038.4 458.59 229.29 0.87184 0.8718 86.312-230.17-1.7437z" style="fill-opacity:.4;fill:#fff400"/>
+  <path d="m1041.8 604.18v85.44l227.55-1.7437-0.8718-83.697z" style="fill-opacity:.4;fill:#fff400"/>
+  <path d="m1163.9 779.42 0.8719 46.207 56.67-2.6155 0.8718-43.592z" style="fill-opacity:.4;fill:#fff400"/>
+  <path d="m1019.2 869.22-27.899 68.003 34.002 13.078 3.4874-11.334 17.437 6.1029h85.44l3.4873-8.7184h14.821l5.231-13.949z" style="fill-opacity:.4;fill:#fff400"/>
+  <path d="m942.46 839.58-25.283 64.516 69.747 28.771 28.771-65.388z" style="fill-opacity:.4;fill:#fff400"/>
+  <path d="m811.68 786.4-18.309 63.644-4.3592-5.231-4.3592 15.693 13.078 3.4874 3.4874-5.231 94.159 34.874 26.155-62.772z" style="fill-opacity:.4;fill:#fff400"/>
+  <path d="m766.35 930.25 0.87184 32.258 113.34-3.4874-102.01-41.848-6.9747 18.309z" style="fill-opacity:.4;fill:#fff400"/>
+  <path d="m763.73 1001.7 1.7437 95.902 54.054-0.8718 0.87184-95.902z" style="fill-opacity:.4;fill:#fff400"/>
+  <path d="m822.14 1000.9v95.902l42.72-0.8718v-96.774z" style="fill-opacity:.4;fill:#fff400"/>
+  <path d="m923.28 1000.9h61.901l0.87184 97.646-64.516-2.6155z" style="fill-opacity:.4;fill:#fff400"/>
+  <path d="m867.48 1002.6 54.054-1.7437-0.87184 94.159-55.798 0.8719z" style="fill-opacity:.4;fill:#fff400"/>
+  <path d="m987.79 1e3 136.01 53.182-1.7437 41.848-134.26 0.8719z" style="fill-opacity:.4;fill:#fff400"/>
+  <path d="m597.43 1005.7 36.617-0.218 0.43592 8.5004 9.1543 4.3592-9.3723 28.117 0.21796 16.129 8.9364 3.9233-5.449 16.565-4.1412-1.7437 0.65388 15.475h-37.271z" style="fill-opacity:.4;fill:#fff400"/>
+  <path d="m534 1005.4 60.375-0.218-0.21796 91.325-59.067 0.218z" style="fill-opacity:.4;fill:#fff400"/>
+  <path d="m431.12 1005.4 101.57-0.4359 0.43591 91.761-102.22 0.218z" style="fill-opacity:.4;fill:#fff400"/>
+  <path d="m367.48 1005.2c1.0898 0 60.157-0.2179 60.157-0.2179v93.069l-61.029-0.436z" style="fill-opacity:.4;fill:#fff400"/>
+  <path d="m258.5 1006.1 0.43592 90.453 104.62-0.6538v-90.235z" style="fill-opacity:.4;fill:#fff400"/>
+  <path d="m191.8 895.38-1.003 62.328 194.19-0.30824v-9.5555l-188.34-53.634z" style="fill-opacity:.4;fill:#fff400"/>
+  <path d="m320.26 766.91-20.344 75.827 160.9 45.003 18.495-76.752z" style="fill-opacity:.4;fill:#fff400"/>
+  <path d="m495.04 818.69-11.097 38.838 48.086 12.33-11.097 35.756 21.885 6.1648-2.1577 5.5484 21.577 6.1648 6.4731-21.269-4.0072-1.5412 4.9319-20.344 41.304 12.33 0.92472-4.3154 8.939 2.1577-1.233 4.9319 34.831 9.8637-9.8637 37.297 37.297 10.48 20.96-73.362-36.681-12.021-1.233 4.6236-5.8566-2.1577v-4.3154l-35.448-10.172 3.6989-11.405-13.563-4.6236-4.0071 12.021z" style="fill-opacity:.4;fill:#fff400"/>
+  <path d="m655.63 733.92-18.803 75.828-99.562-28.975 21.577-75.827z" style="fill-opacity:.4;fill:#fff400"/>
+  <path d="m178.78 432.77 1104.7-3.6989v23.426l-1104.7-3.6989z" style="fill-opacity:.4;fill:#fa0"/>
+  <text transform="matrix(1.2131 0 0 1.4223 -206.88 -180.01)" style="fill:#000000;shape-inside:url(#rect27);stroke-width:.44272;white-space:pre" xml:space="preserve"><tspan x="489.48828" y="441.25265">Free Street Parking</tspan></text>
+  <path d="m1281.1 268.79v45.62l-1102.3-2.4659-1.233-45.62z" style="fill-opacity:.4;fill:#fa0;stroke-width:0"/>
+  <text transform="matrix(1.8945 0 0 2.2212 -619.36 -681.64)" style="fill:#000000;shape-inside:url(#rect27-1);stroke-width:.44272;white-space:pre" xml:space="preserve"><tspan x="489.48828" y="441.25265">Free Parking (3-hr Limit)</tspan></text>
+  <path d="m297.3 553.62 171.24 43.592 1117.6-1.7437-2.2832-41.848z" style="fill-opacity:.4;fill:#fa0;stroke-width:0"/>
+  <text transform="matrix(1.8945 0 0 2.2212 -466.64 -395.95)" style="fill:#000000;shape-inside:url(#rect27-1-2);stroke-width:.44272;white-space:pre" xml:space="preserve"><tspan x="489.48828" y="441.25265">Free Parking (90-min Limit)</tspan></text>
+  <path d="m747.17 703.57 127.29 24.412 287.71 0.87184 120.31-0.87184-0.8719-26.155z" style="fill-opacity:.4;fill:#fff300;stroke-width:0"/>
+  <text transform="matrix(1.2131 0 0 1.4223 474.19 91.319)" style="fill:#000000;shape-inside:url(#rect27-4);stroke-width:.44272;white-space:pre" xml:space="preserve"><tspan x="489.48828" y="441.25265">Paid Parking (90-min Limit)</tspan></text>
+  <path d="m775.07 1124.7h510.03l-1.7436-20.924-1027.9 1.7437-0.87184 21.796z" style="fill-opacity:.4;fill:#fe0"/>
+  <text transform="matrix(1.2131 0 0 1.4223 -202.28 492.86)" style="fill:#000000;shape-inside:url(#rect27-4-1);stroke-width:.44272;white-space:pre" xml:space="preserve"><tspan x="489.48828" y="441.25265">Paid Parking (90-min Limit)</tspan></text>
+  <path d="m1283.3 1104.6-0.8719-510.03 45.43 0.31216-1.2329 529.56-43.77-0.6165z" style="fill-opacity:.4;fill:#fe0"/>
+  <text transform="matrix(0 -1.2131 1.4223 0 682.81 1681.3)" style="fill:#000000;shape-inside:url(#rect27-4-9);stroke-width:.44272;white-space:pre" xml:space="preserve"><tspan x="489.48828" y="441.25265">Paid Parking (90-min Limit)</tspan></text>
+  <path d="m1283.5 552.35-1.2329-531.39h45.62v32.206h-28.358l-1.233 33.444h20.96l6.1648 21.057 1.233 448.4" style="fill-opacity:.4;fill:#feab00"/>
+  <text transform="matrix(0 -1.8945 2.2212 0 330.14 1406.9)" style="fill:#000000;shape-inside:url(#rect27-1-2-1);stroke-width:.44272;white-space:pre" xml:space="preserve"><tspan x="489.48828" y="441.25265">Free Parking (90-min Limit)</tspan></text>
+  <path d="m181.34 529.21 122.06 27.027 126.42 31.386-0.87184 18.309 272.89 77.594-2.6155-86.312h47.079l1.7437 104.62 122.06 26.155-0.87184 15.693 225.81 87.184 186.57-1.7437 0.8719 42.72-222.32-0.8718-285.09-114.21-10.462-16.565-69.747-20.924-20.052 8.7184-489.97-139.49z" style="fill-opacity:.4;fill:#ffe600"/>
+  <text transform="matrix(1.1544 .37279 -.43708 1.3535 255.97 -93.59)" style="fill:#000000;shape-inside:url(#rect27-4-4);stroke-width:.44272;white-space:pre" xml:space="preserve"><tspan x="489.48828" y="441.25265">Paid Parking (90-min Limit)</tspan></text>
+ </g>
+</svg>
