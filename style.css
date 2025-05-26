@@ -160,8 +160,11 @@
 
 .nav-item:hover .comic-nav-text {
     color: #f6db35 !important;
+    text-shadow: 0 0 15px #FFEB3B,
                  2px 2px 0 rgba(0,0,0,0.3);
 }
+
+
 
 
 
