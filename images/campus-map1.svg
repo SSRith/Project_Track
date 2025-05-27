@@ -25,9 +25,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      showgrid="false"
-     inkscape:zoom="0.81105148"
-     inkscape:cx="827.3211"
-     inkscape:cy="990.68927"
+     inkscape:zoom="1.147"
+     inkscape:cx="861.3775"
+     inkscape:cy="785.96338"
      inkscape:window-width="2560"
      inkscape:window-height="1361"
      inkscape:window-x="-9"
@@ -125,7 +125,7 @@
        transform="matrix(1.2130907,0,0,1.3798215,325.75735,473.0781)"><tspan
          x="0"
          y="0"
-         id="tspan9">Free Street Parking</tspan></text><path
+         id="tspan1">Free Street Parking</tspan></text><path
        style="fill:#ffaa00;fill-opacity:0.4;stroke:#000000;stroke-width:0;stroke-dasharray:none;stroke-opacity:1"
        d="m 1244.0641,294.67919 v 45.6198 l -1102.27285,-2.46594 -1.23297,-45.61979 z"
        id="path27" /><text
@@ -135,9 +135,9 @@
        transform="matrix(1.8944633,0,0,2.2211818,280.79091,326.67505)"><tspan
          x="0"
          y="0"
-         id="tspan10">Free Parking (3-hr Limit)</tspan></text><path
+         id="tspan2">Free Parking (3-hr Limit)</tspan></text><path
        style="fill:#ffaa00;fill-opacity:0.4;stroke:#000000;stroke-width:0;stroke-dasharray:none;stroke-opacity:1"
-       d="m 267.70608,583.57056 129.50059,31.2622 845.20723,-1.2504 -1.7266,-30.0118 z"
+       d="m 267.70608,583.57056 129.50059,39.10876 845.20723,-1.56424 -1.7266,-37.54452 z"
        id="path28" /><text
        xml:space="preserve"
        id="text26-0-1"
@@ -145,7 +145,7 @@
        transform="matrix(1.5961131,0,0,1.3798215,412.81905,606.18284)"><tspan
          x="0"
          y="0"
-         id="tspan11">Free Parking (90-min Limit)</tspan></text><path
+         id="tspan3">Free Parking (90-min Limit)</tspan></text><path
        style="fill:#fff300;fill-opacity:0.4;stroke:#000000;stroke-width:0;stroke-dasharray:none;stroke-opacity:1"
        d="m 707.71156,729.46685 127.28858,24.41151 287.70696,0.87184 120.3139,-0.87184 -0.8719,-26.15519 z"
        id="path29" /><text
@@ -155,7 +155,7 @@
        transform="matrix(1.2130907,0,0,1.4222999,1026.5591,746.02496)"><tspan
          x="0"
          y="0"
-         id="tspan12">Paid Parking (90-min Limit)</tspan></text><path
+         id="tspan4">Paid Parking (90-min Limit)</tspan></text><path
        style="fill:#ffee00;fill-opacity:0.4;stroke:none"
        d="m 734.6253,1151.7239 h 510.0261 l -1.7436,-20.9242 -1027.89889,1.7437 -0.87184,21.796 z"
        id="path22" /><text
@@ -165,7 +165,7 @@
        transform="matrix(1.2130907,0,0,1.4222999,289.67476,1150.0268)"><tspan
          x="0"
          y="0"
-         id="tspan13">Paid Parking (90-min Limit)</tspan></text><path
+         id="tspan5">Paid Parking (90-min Limit)</tspan></text><path
        style="fill:#ffee00;fill-opacity:0.4;stroke:none;stroke-width:1.01955"
        d="m 1243.2433,1113.4273 -0.8719,-530.16662 45.4298,0.32449 -1.2329,550.47123 -43.7704,-0.6408 z"
        id="path23" /><text
@@ -175,7 +175,7 @@
        transform="matrix(0,-1.2130907,1.4222999,0,1269.3072,1117.4763)"><tspan
          x="0"
          y="0"
-         id="tspan14">Paid Parking (90-min Limit)</tspan></text><path
+         id="tspan6">Paid Parking (90-min Limit)</tspan></text><path
        style="fill:#feab00;fill-opacity:0.4;stroke:none;stroke-width:1.00231"
        d="m 1243.4144,581.9948 -1.2329,-531.391809 h 45.6197 v 32.205565 h -28.3582 l -1.233,33.444234 h 20.9605 l 6.1648,21.05749 1.233,448.40054"
        id="path25" /><text
@@ -185,9 +185,9 @@
        transform="matrix(0,-1.8944633,2.2211818,0,1271.667,523.71984)"><tspan
          x="0"
          y="0"
-         id="tspan15">Free Parking (90-min Limit)</tspan></text><path
+         id="tspan7">Free Parking (90-min Limit)</tspan></text><path
        style="fill:#ffe600;fill-opacity:0.4;stroke:none"
-       d="m 145.58657,558.79785 122.05754,27.02702 126.41674,31.38623 -0.87184,18.30863 272.88579,77.59372 -2.61552,-86.31212 h 47.07934 l 1.74368,104.62075 122.05754,26.15519 -0.87184,15.69311 225.8064,87.18396 186.5736,-1.74368 0.8719,42.72013 -222.3191,-0.8718 -285.09147,-114.21101 -10.46208,-16.56496 -69.74716,-20.92415 -20.05231,8.7184 -489.97385,-139.49433 z"
+       d="m 140.6547,556.33192 122.05754,27.02702 126.41674,31.38623 -0.87184,18.30863 272.88579,77.59372 -2.61552,-86.31212 h 47.07934 l 1.74368,104.62075 122.05754,26.15519 -0.87184,15.69311 225.80637,87.18396 186.5736,-1.74368 0.8719,42.72013 -222.3191,-0.8718 -285.09144,-114.21101 -10.46208,-16.56496 -69.74716,-20.92415 -20.05231,8.7184 -489.97385,-139.49433 z"
        id="path26" /><text
        xml:space="preserve"
        id="text26-7-0"
@@ -195,4 +195,4 @@
        transform="matrix(1.1543902,0.37278994,-0.43708116,1.3534759,598.73701,720.16828)"><tspan
          x="0"
          y="0"
-         id="tspan16">Paid Parking (90-min Limit)</tspan></text></g></svg>
+         id="tspan8">Paid Parking (90-min Limit)</tspan></text></g></svg>
