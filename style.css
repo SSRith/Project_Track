@@ -62,7 +62,23 @@
 
 
 
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+}
 
+.animate-float {
+    animation: float 3s ease-in-out infinite;
+}
+
+.comic-box {
+    box-shadow: 8px 8px 0 rgba(0,0,0,0.2);
+}
+
+.font-comic {
+    font-family: "Comic Sans MS", "Chalkboard SE", cursive;
+}
 
 
 #balloon-section {
@@ -135,15 +151,13 @@
 
 
 
-/* Remove underline effect */
 .nav-item::after {
     display: none !important;
 }
 
-/* Update dot styling */
 .comic-nav-dot {
     background: #f6db35;
-    border: none; /* Remove black border */
+    border: none; 
     box-shadow: 0 0 8px rgba(255, 235, 59, 0.5);
 }
 
@@ -167,7 +181,31 @@
 
 
 
+/* Add to style.css */
+.space-logo {
+    /* Create dimensional floating effect */
+    transform: translate(-50%, -50%) perspective(1000px) rotateY(-15deg);
+    box-shadow: 
+        0 0 30px rgba(157, 0, 255, 0.4),
+        0 0 60px rgba(0, 194, 255, 0.3),
+        0 0 90px rgba(0, 194, 255, 0.2);
+    background: radial-gradient(
+        ellipse at center,
+        rgba(157, 0, 255, 0.2) 0%,
+        transparent 70%
+    );
+    backdrop-filter: blur(2px);
+}
 
+.space-logo::after {
+    content: "";
+    position: absolute;
+    inset: -15px;
+    border: 2px solid rgba(0, 194, 255, 0.3);
+    border-radius: 50%;
+    filter: blur(8px);
+    z-index: -1;
+}
         
         
         .comic-title {
@@ -581,60 +619,6 @@ min-width: 300px;
     100% { opacity: 0.9; }
 }
 
-/* Pixel loader */
-.pixel-loader {
-    position: relative;
-    width: 64px;
-    height: 64px;
-}
-
-.pixel-spinner {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border: 4px solid #9D00FF;
-    border-top-color: transparent;
-    border-radius: 50%; /* Makes it circular */
-    animation: pixel-spin 1.5s linear infinite;
-}
-
-@keyframes pixel-spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-
-/* Retro text */
-.retro-text {
-    font-family: 'Bangers', cursive;
-    text-shadow: 3px 3px 0 rgba(0,0,0,0.3);
-    letter-spacing: 3px;
-    -webkit-text-stroke: 0;
-    text-stroke: 0;
-    color: #9D00FF;
-}
-
-.pixel-cursor {
-    display: inline-block;
-    width: 8px;
-    height: 16px;
-    background: #9D00FF;
-    margin-left: 4px;
-    animation: pixel-blink 0.8s steps(1) infinite;
-}
-
-@keyframes pixel-blink {
-    50% { opacity: 0; }
-}
-
-/* Progress bar */
-.pixel-progress-bar {
-    box-shadow: inset 0 0 8px rgba(0,0,0,0.5);
-}
-
-.progress-inner {
-    transition: width 0.3s ease;
-    box-shadow: 0 0 8px #9D00FF;
-}
 
 
 
