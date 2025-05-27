@@ -122,12 +122,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 // fetching each html files to index
 const loads = [
-  { id: 'loadingScreen', file: 'partials/loading-screen.html' },
   { id: 'typing-transition', file: 'partials/typing-transition.html' },
   { id: 'cover', file: 'partials/cover.html' },
   { id: 'nav-placeholder', file: 'partials/navigation.html' },
   { id: 'map-intro-placeholder', file: 'partials/map-intro.html' },
-  { id: 'interactive-map-placeholder', file: 'partials/interactive-map.html' }, // ✅
+  { id: 'interactive-map-placeholder', file: 'partials/interactive-map.html' }, 
   { id: 'scavenger-placeholder', file: 'partials/scavenger-hunt.html' },
   { id: 'buildings-placeholder', file: 'partials/buildings.html' },
   { id: 'resources-placeholder', file: 'partials/resources.html' },
