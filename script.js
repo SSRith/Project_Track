@@ -158,139 +158,139 @@ function showBuildingInfo(code) {
   BB: {
     name: "Birmingham Block",
     description: "Features classrooms, computer labs, and study spaces.",
-    image: "images/buildings/bb.jpg",
+    image: "images/gallery/bb1.jpg",
     link: "#building-BB"
   },
   BHS: {
     name: "Birmingham Hay & Seed",
     description: "Home to student services, advising, and registration.",
-    image: "images/buildings/bhs.jpg",
+    image: "images/gallery/bhs1.jpg",
     link: "#building-BHS"
   },
   CP: {
     name: "Cherry Parkes",
     description: "Focuses on Computer Science, Engineering, and Tech Labs.",
-    image: "images/buildings/cp.jpg",
+    image: "images/gallery/cp1.jpg",
     link: "#building-CP"
   },
   Court17: {
     name: "Court 17 Student Housing",
     description: "Includes Writing Center, Tutoring, and Academic Support.",
-    image: "images/buildings/court.jpg",
+    image: "images/gallery/court1.jpg",
     link: "#building-Court17"
   },
   DOU: {
     name: "Dougan",
     description: "Science labs, research, and STEM resources.",
-    image: "images/buildings/dougan.jpg",
+    image: "images/gallery/dou1.jpg",
     link: "#building-DOU"
   },
   GWP: {
     name: "Garretson Woodruff & Pratt",
     description: "Library, study rooms, and research help.",
-    image: "images/buildings/gwp.jpg",
+    image: "images/gallery/gwp1.jpg",
     link: "#building-GWP"
   },
   HAR: {
     name: "Harmon",
     description: "Science labs and STEM-focused facilities.",
-    image: "images/buildings/har.jpg",
+    image: "images/gallery/har1.jpg",
     link: "#building-HAR"
   },
   JOY: {
     name: "Russell T. Joy",
     description: "Houses lecture halls and general classrooms.",
-    image: "images/buildings/joy.jpg",
+    image: "images/gallery/joy1.jpg",
     link: "#building-JOY"
   },
   KEY: {
     name: "Keystone",
     description: "Science and research labs.",
-    image: "images/buildings/key.jpg",
+    image: "images/gallery/key1.jpg",
     link: "#building-KEY"
   },
   LBH: {
     name: "Laborers Hall",
     description: "STEM resources and research rooms.",
-    image: "images/buildings/lab.jpg",
+    image: "images/gallery/lab1.jpg",
     link: "#building-LBH"
   },
   MAT: {
     name: "Mattress Factory",
     description: "Labs and experimental workspaces.",
-    image: "images/buildings/mat.jpg",
+    image: "images/gallery/mat1.jpg",
     link: "#building-MAT"
   },
   MDS: {
     name: "McDonald Smith",
     description: "Science and research-related classrooms.",
-    image: "images/buildings/mds.jpg",
+    image: "images/gallery/mds1.jpg",
     link: "#building-MDS"
   },
   MLG: {
     name: "Milgard Hall",
     description: "STEM and business hub.",
-    image: "images/buildings/mlg.jpg",
+    image: "images/gallery/mlg1.jpg",
     link: "#building-MLG"
   },
   WPH: {
     name: "William W. Philip Hall",
     description: "Public events and STEM programs.",
-    image: "images/buildings/wph.jpg",
+    image: "images/gallery/wph1.jpg",
     link: "#building-WPH"
   },
   PNK: {
     name: "Pinkerton",
     description: "Home to advanced labs and classrooms.",
-    image: "images/buildings/pnk.jpg",
+    image: "images/gallery/pnk1.jpg",
     link: "#building-PNK"
   },
   SCI: {
     name: "Science Building",
     description: "Dedicated to scientific research and education.",
-    image: "images/buildings/sci.jpg",
+    image: "images/gallery/sci1.jpg",
     link: "#building-SCI"
   },
   SNO: {
     name: "Snoqualmie Building",
     description: "Linked to academic services and research.",
-    image: "images/buildings/sno.jpg",
+    image: "images/gallery/sno1.jpg",
     link: "#building-SNO"
   },
   TPS: {
     name: "Tacoma Paper & Stationery",
     description: "Facilities for STEM and innovation.",
-    image: "images/buildings/tps.jpg",
+    image: "images/gallery/tps1.jpg",
     link: "#building-TPS"
   },
   TLB: {
     name: "Tioga Library Building",
     description: "Library services and quiet study areas.",
-    image: "images/buildings/tlb.jpg",
+    image: "images/gallery/tlb1.jpg",
     link: "#building-TLB"
   },
   UWY: {
     name: "University Y Student Center",
     description: "Student recreation, fitness, and services.",
-    image: "images/buildings/uwy.jpg",
+    image: "images/gallery/uwy1.jpg",
     link: "#building-UWY"
   },
   WG: {
     name: "Walsh Gardner",
     description: "Research support and classroom facilities.",
-    image: "images/buildings/wg.jpg",
+    image: "images/gallery/wg1.jpg",
     link: "#building-WG"
   },
   WCG: {
     name: "West Coast Grocery",
     description: "Mixed-use academic and resource building.",
-    image: "images/buildings/wcg.jpg",
+    image: "images/gallery/wcg1.jpg",
     link: "#building-WCG"
   },
   WHT: {
     name: "The Whitney",
     description: "Labs and classroom spaces.",
-    image: "images/buildings/wht.jpg",
+    image: "images/gallery/wht1.jpg",
     link: "#building-WHT"
   }
 };
