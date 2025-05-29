@@ -213,7 +213,7 @@ function showBuildingInfo(code) {
     name: "Laborers Hall",
     description: "STEM resources and research rooms.",
     image: "images/buildings/lab.jpg",
-    link: "#building-LAB"
+    link: "#building-LBH"
   },
   MAT: {
     name: "Mattress Factory",
@@ -310,14 +310,19 @@ function showBuildingInfo(code) {
     e.preventDefault();
     closeSidePanel();
     showSection('buildings'); // make sure this un-hides the section
-    setTimeout(() => {
-        const target = document.getElementById("building-" + code);
-        if (target) {
-        target.scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" });
 
+    setTimeout(() => {
+        console.log("Scrolling to:", "building-" + code);
+
+        const target = document.getElementById("building-" + code);
+
+        if (target) {
+        target.scrollIntoView({
+          behavior: "smooth", 
+          block: "center" });
         }
     }, 300); // delay to match panel close animation
-    };
+    }; 
 
     panel.classList.add("open");
   }
