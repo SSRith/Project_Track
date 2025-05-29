@@ -39,6 +39,7 @@ function startAdventure() {
     document.getElementById('earth-section').classList.add('hidden');  // Hide earth background
     document.getElementById('balloon-section').classList.add('hidden');  // Hide hot air balloon background
     document.getElementById('rainier-section').classList.add('hidden');  // Hide mount rainier background
+    document.getElementById('oceandiving-section').classList.add('hidden');  // Hide ocean diving background
     document.getElementById('main-content').classList.remove('hidden'); // Show main content
     const cover = document.getElementById('cover');
     const typingTransition = document.getElementById('typing-transition');
