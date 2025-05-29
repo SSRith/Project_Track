@@ -143,7 +143,39 @@
     transition: opacity 0.3s ease;
 }
 
-#rainier-section:hover .absolute::after {
+#oceandiving-section:hover .absolute::after {
+    opacity: 1;
+}
+
+
+#oceandiving-section {
+    overflow: hidden;
+}
+
+#oceandiving-section .absolute {
+    transition: all 0.5s ease;
+}
+
+#oceandiving-section:hover .absolute {
+    transform: scale(1.02);
+    filter: brightness(0.95);
+}
+
+#oceandiving-section .absolute::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        45deg,
+        rgba(0,0,0,0.4) 0%,
+        rgba(75,46,131,0.2) 50%,
+        rgba(0,0,0,0.4) 100%
+    );
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+#oceandiving-section:hover .absolute::after {
     opacity: 1;
 }
 
