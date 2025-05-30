@@ -6,8 +6,8 @@ import mongoose from 'mongoose';
 app.set("view engine", "ejs");
 import dotenv from 'dotenv';
 dotenv.config();
+app.use(cors());
 
- 
 mongoose.connect(process.env.MONGO_URL).then(console.log("db connected"));
 
 const data = [
@@ -83,3 +83,16 @@ app.listen(port, err => {
     console.log('Server listening on port', port);
 });
 
+app.post('/tips', async (req, res) => {
+  try {
+    const { name = "Anonymous", Major = "Student", tip } = req.body;
+    if (!tip) return res.status(400).json({ error: "Tip is required" });
+
+    const newTip = new GFGCollection({ name, Major, tip });
+    await newTip.save();
+
+    res.status(201).json({ message: "Tip saved!" });
+  } catch (err) {
+    res.status(500).json({ error: "Failed to save tip" });
+  }
+});
