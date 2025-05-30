@@ -1,22 +1,22 @@
 <!-- Comic Book Cover -->
-    <div id="cover" class="comic-panel min-h-screen flex flex-col items-center justify-end pb-32 p-8 relative overflow-hidden">
-        <!-- Background elements -->
-        <div class="absolute inset-0 bg-[url('first_man.png')] bg-cover bg-center opacity-90"></div>
-        <div class="absolute inset-0 bg-gradient-to-b from-black/20 to-[#9D00FF]/10 crt-effect"></div>
-        <!-- Text Container -->
-        <div class="relative z-10 text-center space-y-8 mb-12">
-            <h2 class="comic-title text-yellow-400 text-6xl md:text-8xl animate-bounce">
-            FOR US, BY US!
-            </h2>
-            <p class="handwritten-byline tracking-wide">
-            TACOMA RESOURCES & ACADEMIC COMMUNITY KIT
-            </p>
-        </div>
-        <!-- Start Button -->
-        <div class="relative z-10 text-center">
-            <button onclick="startAdventure()" class="comic-button pulse mb-8">START ADVENTURE!</button>
-        </div>
-        </div>
+<div id="cover" class="comic-panel min-h-screen flex flex-col items-center justify-end pb-32 p-8 relative overflow-hidden">
+    <!-- Background elements -->
+    <div class="absolute inset-0 bg-[url('first_man.png')] bg-cover bg-center opacity-90"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-black/20 to-[#9D00FF]/10 crt-effect"></div>
+    <!-- Text Container -->
+    <div class="relative z-10 text-center space-y-8 mb-12">
+        <h2 class="comic-title text-yellow-400 text-6xl md:text-8xl animate-bounce">
+        FOR US, BY US!
+        </h2>
+        <p class="handwritten-byline tracking-wide">
+        TACOMA RESOURCES & ACADEMIC COMMUNITY KIT
+        </p>
+    </div>
+    <!-- Updated Start Button -->
+    <div class="relative z-10 text-center">
+        <button onclick="startAdventure()" class="comic-button pulse mb-8 bg-red-500 text-white hover:bg-red-600">START ADVENTURE!</button>
+    </div>
+</div>
 
         <!-- Earth section -->
         <div id="earth-section" class="min-h-screen flex flex-col items-center justify-center relative">
@@ -49,9 +49,163 @@
                 </div>
             </div>
         </div>
+        
 
-
+        <!-- Mount Rainier section -->
         <div id="rainier-section" class="min-h-screen flex flex-col items-center justify-center relative">
             <div class="absolute inset-0 bg-[url('mount_rainier.png')] bg-cover bg-center"></div>
+
+            <!-- Enhanced New Student Section -->
+            <div class="mt-8 comic-box bg-yellow-400 border-4 border-black p-6 transform rotate-1 max-w-2xl w-full">
+                <div class="flex items-center mb-4">
+                    <h4 class="comic-title text-2xl md:text-3xl text-purple-800">NEW HUSKIES CHECKLIST</h4>
+                </div>
+                <ul class="font-comic text-black space-y-2 pl-5 text-base md:text-lg">
+                    <li class="flex items-start">
+                        <span class="text-purple-800 mr-2 text-xl">•</span>
+                        <span>Join the orientation program</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-purple-800 mr-2 text-xl">•</span>
+                        <span>Get your WA driver license</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-purple-800 mr-2 text-xl">•</span>
+                        <span>Visit International Student Services in GWP 102</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-purple-800 mr-2 text-xl">•</span>
+                        <span>Register your vehicle with UW Transportation Services</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-purple-800 mr-2 text-xl">•</span>
+                        <span>Activate your UW NetID</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-purple-800 mr-2 text-xl">•</span>
+                        <span>Attend the Student Career Fairs</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-purple-800 mr-2 text-xl">•</span>
+                        <span>Take Advantage of Student Discounts</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-purple-800 mr-2 text-xl">•</span>
+                        <span>Bookmark the academic calendar key dates</span>
+                    </li>
+                </ul>
+                </div>
+            </div>
         </div>
     </div>
+
+
+
+        <!-- Ocean section -->
+        <div id="oceandiving-section" class="min-h-screen flex flex-col items-center justify-center relative">
+            <div class="absolute inset-0 bg-[url('ocean_diving.png')] bg-cover bg-center"></div>
+
+
+        <!-- FAQ Container -->
+            <div class="relative z-10 container mx-auto px-4 max-w-4xl">
+                <div class="text-center mb-12">
+                    <h3 class="comic-title text-4xl md:text-5xl text-yellow-400 mb-4">
+                        NEW HUSKY FAQ
+                    </h3>
+                    <div class="bg-black inline-block px-6 py-2 transform rotate-1">
+                        <h4 class="comic-title text-xl text-white">
+                            FREQUENTLY ASKED QUESTIONS
+                        </h4>
+                    </div>
+                </div>
+                
+                <!-- FAQ Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <!-- FAQ Item 1 -->
+                    <div class="comic-box bg-yellow-400 border-4 border-black p-4 transform rotate-1">
+                        <div class="flex items-start">
+                            <div class="bg-purple-700 text-white px-3 py-1 mr-3 font-bold border-2 border-black">Q</div>
+                            <h4 class="comic-title text-lg md:text-xl text-purple-800 flex-1">Where can I get my student ID?</h4>
+                        </div>
+                        <div class="flex items-start mt-2">
+                            <div class="bg-yellow-400 text-black px-3 py-1 mr-3 font-bold border-2 border-black">A</div>
+                            <p class="font-comic text-black text-sm md:text-base flex-1">
+                                Visit the Husky Card Office in Mattress Factory (MAT) with a photo ID!
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 2 -->
+                    <div class="comic-box bg-yellow-400 border-4 border-black p-4 transform -rotate-1">
+                        <div class="flex items-start">
+                            <div class="bg-purple-700 text-white px-3 py-1 mr-3 font-bold border-2 border-black">Q</div>
+                            <h4 class="comic-title text-lg md:text-xl text-purple-800 flex-1">How do I find my classes?</h4>
+                        </div>
+                        <div class="flex items-start mt-2">
+                            <div class="bg-yellow-400 text-black px-3 py-1 mr-3 font-bold border-2 border-black">A</div>
+                            <p class="font-comic text-black text-sm md:text-base flex-1">
+                                Use our interactive campus map! Buildings use codes (BB = Birmingham Block)
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 3 -->
+                    <div class="comic-box bg-yellow-400 border-4 border-black p-4 transform rotate-2">
+                        <div class="flex items-start">
+                            <div class="bg-purple-700 text-white px-3 py-1 mr-3 font-bold border-2 border-black">Q</div>
+                            <h4 class="comic-title text-lg md:text-xl text-purple-800 flex-1">Where's the best coffee on campus?</h4>
+                        </div>
+                        <div class="flex items-start mt-2">
+                            <div class="bg-yellow-400 text-black px-3 py-1 mr-3 font-bold border-2 border-black">A</div>
+                            <p class="font-comic text-black text-sm md:text-base flex-1">
+                                Common Grounds in Dougan (DOU) or Metropolitan Market in Court 17!
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 4 -->
+                    <div class="comic-box bg-yellow-400 border-4 border-black p-4 transform -rotate-2">
+                        <div class="flex items-start">
+                            <div class="bg-purple-700 text-white px-3 py-1 mr-3 font-bold border-2 border-black">Q</div>
+                            <h4 class="comic-title text-lg md:text-xl text-purple-800 flex-1">How do I get around Tacoma?</h4>
+                        </div>
+                        <div class="flex items-start mt-2">
+                            <div class="bg-yellow-400 text-black px-3 py-1 mr-3 font-bold border-2 border-black">A</div>
+                            <p class="font-comic text-black text-sm md:text-base flex-1">
+                                Free shuttle buses! Pierce Transit routes 400 & 500 stop right on campus.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 5 -->
+                    <div class="comic-box bg-yellow-400 border-4 border-black p-4 transform rotate-1">
+                        <div class="flex items-start">
+                            <div class="bg-purple-700 text-white px-3 py-1 mr-3 font-bold border-2 border-black">Q</div>
+                            <h4 class="comic-title text-lg md:text-xl text-purple-800 flex-1">Where can I study late?</h4>
+                        </div>
+                        <div class="flex items-start mt-2">
+                            <div class="bg-yellow-400 text-black px-3 py-1 mr-3 font-bold border-2 border-black">A</div>
+                            <p class="font-comic text-black text-sm md:text-base flex-1">
+                                Tioga Library (TLB) open until 10PM! Court 17 has 24/7 study lounges.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 6 -->
+                    <div class="comic-box bg-yellow-400 border-4 border-black p-4 transform -rotate-1">
+                        <div class="flex items-start">
+                            <div class="bg-purple-700 text-white px-3 py-1 mr-3 font-bold border-2 border-black">Q</div>
+                            <h4 class="comic-title text-lg md:text-xl text-purple-800 flex-1">Where's the best view of Rainier?</h4>
+                        </div>
+                        <div class="flex items-start mt-2">
+                            <div class="bg-yellow-400 text-black px-3 py-1 mr-3 font-bold border-2 border-black">A</div>
+                            <p class="font-comic text-black text-sm md:text-base flex-1">
+                                4th floor of Joy (JOY) or the skybridge in Cherry Parkes (CP)!
+                            </p>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </div> 
+    </div> 
+
