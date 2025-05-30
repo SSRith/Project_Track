@@ -329,6 +329,3 @@ function closeSidePanel() {
 
 
 
-
-
-

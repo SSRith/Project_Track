@@ -93,8 +93,9 @@
                 
                 <div class="comic-panel p-4 mt-6">
                     <h3 class="comic-title text-2xl mb-2">SHARE YOUR OWN TIP!</h3>
-                    <textarea class="w-full p-3 border-2 border-black rounded mb-3" rows="3" placeholder="What's your best campus advice?"></textarea>
-                    <button class="comic-button">SUBMIT TIP</button>
+                    <textarea onchange="storeText()" id="tipBox" class="w-full p-3 border-2 border-black rounded mb-3" rows="3" placeholder="What's your best campus advice?"></textarea>
+                    <button onclick="myFunction(this, 'red')" id="trackBtn" class="comic-button">SUBMIT TIP</button>
+                    
                 </div>
             </div>
         </section>
