@@ -6,14 +6,12 @@
             --highlight: #D22630;  /* Red used for main cursor border */
             --splash1: #9D00FF;    /* Purple used for inner dot */
             --splash2: #00C2FF;    /* Blue used for trailing dot */
+            --splash3: #FF9900;    /* Creative orange - ADDED FOR STARS */
         }
 
         
 
-        .action-line {
-            transform-origin: left center;
-            animation: actionLine 1s infinite alternate;
-        }
+        
 
         @keyframes actionLine {
             0% { transform: scaleX(0.8) skew(-20deg); opacity: 0.7; }
@@ -323,16 +321,45 @@
             width: 0;
         }
         
-        .action-line {
-            font-family: 'Bangers', cursive;
-            color: var(--highlight);
-            transform: rotate(-3deg);
-            text-shadow: 2px 2px 0 black;
-            letter-spacing: 1px;
-            font-size: 1.5rem;
-            margin: 1rem 0;
-        }
-        
+.action-line {
+    font-family: 'Bangers', cursive;
+    color: var(--highlight);
+    transform-origin: center;
+    text-shadow: 2px 2px 0 black;
+    letter-spacing: 2px;
+    font-size: 1.8rem;
+    margin: 1.5rem 0;
+    position: relative;
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    background: transparent;
+    animation: actionPulse 2s infinite;
+}
+
+@keyframes actionPulse {
+    0%, 100% { transform: scale(1) rotate(-3deg); }
+    50% { transform: scale(1.05) rotate(-2deg); }
+}
+
+.action-line::before {
+    content: "★";
+    position: absolute;
+    left: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--splash3);
+    text-shadow: 1px 1px 0 black;
+}
+
+.action-line::after {
+    content: "★";
+    position: absolute;
+    right: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--splash3);
+    text-shadow: 1px 1px 0 black;
+}
         
 
 .comic-button {
@@ -373,7 +400,7 @@
     box-shadow: 
         8px 8px 0 black,
         12px 12px 0 rgba(0,0,0,0.1);
-    background-color: #E8B000; /* Lighter gold on hover */
+    background-color: #E8B000;
 }
 
 .comic-button:hover::before {
