@@ -49,54 +49,10 @@
                 </div>
                 
                 <div class="action-line text-center my-8">MORE POWER TIPS FROM FELLOW STUDENTS!</div>
-                
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div class="comic-panel p-4">
-                        <div class="flex items-center mb-3">
-                            <div class="w-16 h-16 bg-red-500 rounded-full mr-3"></div>
-                            <div>
-                                <h3 class="font-bold">Jamie, Senior</h3>
-                                <p class="text-sm">Computer Science</p>
-                            </div>
-                        </div>
-                        <div class="speech-bubble">
-                            <p>"Office hours are your best friend! Professors want to help you succeed."</p>
-                        </div>
-                    </div>
-                    
-                    <div class="comic-panel p-4">
-                        <div class="flex items-center mb-3">
-                            <div class="w-16 h-16 bg-green-500 rounded-full mr-3"></div>
-                            <div>
-                                <h3 class="font-bold">Alex, Junior</h3>
-                                <p class="text-sm">Business</p>
-                            </div>
-                        </div>
-                        <div class="speech-bubble">
-                            <p>"The quiet floors in the library saved my GPA during midterms!"</p>
-                        </div>
-                    </div>
-                    
-                    <div class="comic-panel p-4">
-                        <div class="flex items-center mb-3">
-                            <div class="w-16 h-16 bg-blue-500 rounded-full mr-3"></div>
-                            <div>
-                                <h3 class="font-bold">Taylor, Sophomore</h3>
-                                <p class="text-sm">Psychology</p>
-                            </div>
-                        </div>
-                        <div class="speech-bubble">
-                            <p>"Join at least one club - it makes a big campus feel smaller."</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- <div class="comic-panel p-4 mt-6">
-                    <h3 class="comic-title text-2xl mb-2">SHARE YOUR OWN TIP!</h3>
-                    <textarea onchange="storeText()" id="tipBox" class="w-full p-3 border-2 border-black rounded mb-3" rows="3" placeholder="What's your best campus advice?"></textarea>
-                    <button onclick="myFunction(this, 'red')" id="trackBtn" class="comic-button">SUBMIT TIP</button>
-                    
-                </div> -->
+            
+                <!-- Tips will load here -->
+                <div id="tipList" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6"></div>
+
                 <div class="comic-panel p-4 mt-6">
                     <h3 class="comic-title text-2xl mb-2">SHARE YOUR OWN TIP!</h3>
                     
@@ -107,8 +63,8 @@
                     <button onclick="myFunction(this, 'red')" id="trackBtn" class="comic-button">SUBMIT TIP</button>
                     </div>
 
-                    <!-- Display tips here -->
-                    <div id="tipList" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-6"></div>
+                    
+
                 </div>
             </div>
         </section>
