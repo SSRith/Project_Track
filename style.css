@@ -224,6 +224,9 @@
     position: relative;
     overflow: hidden;
     z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
 }
 
 .comic-button::before {
@@ -296,11 +299,16 @@
             scroll-snap-type: x mandatory;
             flex-wrap: wrap;
             justify-content: space-around;
-            
+            flex-wrap: nowrap;
+            scroll-snap-type: x mandatory;
         }
         
         .comic-strip-panel {
             flex: 0 0 80%;
+            scroll-snap-align: start;
+            flex: 0 0 auto;
+            min-width: 300px;
+            max-width: 90vw;
             scroll-snap-align: start;
         }
         
@@ -398,7 +406,20 @@
     max-width: 1200px;
     margin: 0 auto;
     gap: 1rem;
+    flex-direction: column;
 }
+
+
+@media (min-width: 768px) {
+  .interactive-map {
+    flex-direction: row;
+  }
+  
+  .side-panel {
+    flex-shrink: 0;
+  }
+}
+
 .map-area{
     display: flex;
     flex-direction: column;
@@ -406,7 +427,9 @@
 #map-container {
     flex: 1;
     min-width: 0;
+    min-height: 400px;
 }
+
 .side-panel {
     width: 320px;
     background-color: white;
@@ -414,11 +437,11 @@
     box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.2);
     padding: 1rem;
     overflow-y: auto;
-
     display: none;
     transform: translateX(100%);
     transition: transform 0.3s ease-in-out;
-    
+    width: 100%;
+    max-width: 320px;
 }
 
 /* Show the panel */
@@ -514,14 +537,17 @@ min-width: 300px;
     box-shadow: 0 0 5px rgba(0, 194, 255, 0.5);
 }
 
-@media (min-width: 768px) {
-    .comic-cursor,
-    .comic-cursor-dot {
-        display: block;
-    }
+.comic-cursor,
+.comic-cursor-dot {
+    display: block; 
 }
 
-
+@media (pointer: coarse) {
+    .comic-cursor,
+    .comic-cursor-dot {
+        display: none;
+    }
+}
 
 
 
