@@ -1,14 +1,3 @@
-//  document.addEventListener('DOMContentLoaded', function() {
-//       setTimeout(function() {
-//           document.getElementById('loadingScreen').style.opacity = '0';
-//           setTimeout(function() {
-//               document.getElementById('loadingScreen').style.display = 'none';
-//           }, 500);
-//       }, 1500);
-//   });
-
-
-
 // Custom cursor logic
 const cursor = document.querySelector('.comic-cursor');
 const cursorDot = document.querySelector('.comic-cursor-dot');
@@ -175,7 +164,7 @@ function showBuildingInfo(code) {
   },
   Court17: {
     name: "Court 17 Student Housing",
-    description: "Includes Writing Center, Tutoring, and Academic Support.",
+    description: "Student housing.",
     image: "images/gallery/court17/court1.jpg",
     link: "#building-Court17"
   },

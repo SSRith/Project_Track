@@ -73,4 +73,5 @@ async function loadTips() {
   }
 }
 
+
 document.addEventListener("DOMContentLoaded", loadTips);
