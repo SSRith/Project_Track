@@ -539,14 +539,26 @@ min-width: 300px;
     gap: 1rem; /* spacing between items */
     align-items: flex-start;
 }
-.highlight-group path {
+/* Initial state: hide path, hide text */
+.highlight-path {
   fill-opacity: 0;
-  transition: fill-opacity 0.2s ease;
+  transition: fill-opacity 0.3s ease;
 }
 
-.highlight-group:hover path {
-  fill-opacity: 0.4;
+.highlight-text {
+  fill-opacity: 0;
+  transition: fill-opacity 0.3s ease;
 }
+
+
+.highlight-group:hover .highlight-path {
+  fill-opacity: 0.4; 
+}
+
+.highlight-group:hover .highlight-text {
+  fill-opacity: 1;
+}
+
         
 
 
