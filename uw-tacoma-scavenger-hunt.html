@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Caveat:wght@700&family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Variables from style.css */
+        :root {
+            --primary: #4B2E83; /* UW Purple */
+            --secondary: #E8E3D3; /* UW Cream */
+            --accent: #85754D; /* UW Gold */
+            --highlight: #D22630; /* Comic red */
+            --splash1: #9D00FF;    /* Purple */
+            --splash2: #00C2FF;    /* Blue */
+            --splash3: #FF9900;    /* Creative orange */
+        }
+
+        /* Keyframes from style.css */
+        @keyframes actionLine {
+            0% { transform: scaleX(0.8) skew(-20deg); opacity: 0.7; }
+            100% { transform: scaleX(1) skew(-20deg); opacity: 1; }
+        }
+
+        @keyframes comic-bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        @keyframes actionPulse {
+            0%, 100% { transform: scale(1) rotate(-3deg); }
+            50% { transform: scale(1.05) rotate(-2deg); }
+        }
+
+        @keyframes crt-flicker {
+            0% { opacity: 0.9; }
+            50% { opacity: 1; }
+            100% { opacity: 0.9; }
+        }
+
+        /* Comic Book Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Comic Neue', cursive;
+            background-color: var(--secondary);
+            color: #333;
+            overflow-x: hidden;
+            padding: 20px;
+        }
+
+        .crt-effect {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            animation: crt-flicker 0.15s infinite;
+            pointer-events: none;
+            z-index: 1000;
+        }
+
+        .comic-container {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, #3a1d6b 100%);
+            color: white;
+            padding: 25px;
+            text-align: center;
+            border: 4px solid black;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            background: 
+                linear-gradient(45deg, 
+                    transparent 40%, 
+                    rgba(255, 255, 255, 0.3) 50%, 
+                    transparent 60%);
+            transform: translateX(-100%);
+            animation: shine 3s infinite;
+        }
+
+        @keyframes shine {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        h1 {
+            font-family: 'Bangers', cursive;
+            font-size: 3rem;
+            letter-spacing: 3px;
+            color: white;
+            text-shadow: 3px 3px 0 black, 5px 5px 0 rgba(0,0,0,0.2);
+            margin-bottom: 15px;
+            transform: rotate(-2deg);
+        }
+
+        .subtitle {
+            font-family: 'Comic Neue', cursive;
+            font-size: 1.3rem;
+            max-width: 600px;
+            margin: 0 auto;
+            color: var(--secondary);
+            text-shadow: 1px 1px 0 black;
+        }
+
+        /* Game Container */
+        .game-container {
+            background-color: white;
+            border: 4px solid black;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .game-container::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-size: 8px 8px;
+            opacity: 0.1;
+            pointer-events: none;
+            mix-blend-mode: multiply;
+        }
+
+        /* Controls */
+        .controls {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+
+        /* Timer */
+        .timer {
+            font-family: 'Bangers', cursive;
+            font-size: 1.8rem;
+            text-align: center;
+            margin-bottom: 20px;
+            color: var(--primary);
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 0 rgba(0,0,0,0.1);
+            background: white;
+            border: 3px solid black;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 4px 4px 0 rgba(0,0,0,0.1);
+        }
+
+        /* Progress */
+        .progress-container {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .progress-text {
+            font-family: 'Bangers', cursive;
+            font-size: 1.5rem;
+            letter-spacing: 1px;
+            color: var(--primary);
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 0 rgba(0,0,0,0.1);
+        }
+
+        .progress-bar {
+            background-color: #e8e8e8;
+            height: 25px;
+            border-radius: 15px;
+            margin-top: 10px;
+            overflow: hidden;
+            border: 3px solid black;
+            box-shadow: inset 3px 3px 5px rgba(0,0,0,0.1);
+        }
+
+        .progress {
+            background: linear-gradient(to right, var(--accent), #d4b95c);
+            height: 100%;
+            width: 0%;
+            transition: width 0.5s ease;
+            border-radius: 12px;
+            box-shadow: inset 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        /* Clue Section */
+        .clue-container {
+            margin-bottom: 25px;
+            padding: 25px;
+            background-color: #f9f9f9;
+            border-radius: 15px;
+            border: 3px solid black;
+            position: relative;
+            box-shadow: 5px 5px 0 rgba(0,0,0,0.1);
+        }
+
+        .clue-container::before {
+            content: "";
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
+            border: 2px dashed var(--accent);
+            border-radius: 10px;
+            pointer-events: none;
+        }
+
+        .clue-title {
+            font-family: 'Bangers', cursive;
+            font-size: 2rem;
+            letter-spacing: 2px;
+            color: var(--primary);
+            margin-bottom: 20px;
+            text-align: center;
+            text-shadow: 2px 2px 0 rgba(0,0,0,0.1);
+        }
+
+
+        .clue-text {
+            font-family: 'Comic Neue', cursive;
+            font-size: 1.3rem;
+            line-height: 1.6;
+            margin-bottom: 25px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid black;
+            box-shadow: 4px 4px 0 rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        .clue-text::after {
+            content: "?";
+            position: absolute;
+            bottom: -25px;
+            right: 20px;
+            font-family: 'Bangers', cursive;
+            font-size: 4rem;
+            color: var(--highlight);
+            transform: rotate(15deg);
+            text-shadow: 3px 3px 0 black;
+        }
+
+        /* Answer Section */
+        .answer-container {
+            margin-top: 30px;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            border: 3px solid black;
+            box-shadow: 4px 4px 0 rgba(0,0,0,0.1);
+        }
+
+        #answer-input {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 3px solid black;
+            border-radius: 10px;
+            font-family: 'Comic Neue', cursive;
+            font-size: 1.2rem;
+            box-shadow: inset 3px 3px 5px rgba(0,0,0,0.1);
+        }
+
+        .button-group {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        /* Comic Button Styles */
+        .comic-button {
+            font-family: 'Bangers', cursive;
+            background-color: #C79900;
+            color: #39275B;
+            border: 3px solid black;
+            padding: 0.8rem 2rem;
+            font-size: 1.4rem;
+            letter-spacing: 1px;
+            transform: skew(-5deg);
+            box-shadow: 5px 5px 0 black;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            cursor: pointer;
+            border-radius: 8px;
+        }
+
+        .comic-button::before {
+            content: "";
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            background: 
+                linear-gradient(45deg, 
+                    transparent 40%, 
+                    rgba(255, 255, 255, 0.7) 50%, 
+                    transparent 60%);
+            z-index: -1;
+            transform: translateX(-100%);
+            transition: transform 0.6s;
+        }
+
+        .comic-button:hover {
+            transform: skew(-5deg) translateY(-5px);
+            box-shadow: 
+                8px 8px 0 black,
+                12px 12px 0 rgba(0,0,0,0.1);
+            background-color: #E8B000;
+        }
+
+        .comic-button:hover::before {
+            transform: translateX(100%);
+        }
+
+        .comic-button:active {
+            transform: skew(-5deg) translateY(0);
+            box-shadow: 3px 3px 0 black;
+        }
+
+        .hint-btn {
+            background-color: var(--splash3);
+            color: black;
+        }
+
+        /* Hint Text */
+        .hint-text {
+            margin-top: 20px;
+            font-style: italic;
+            color: #666;
+            display: none;
+            font-family: 'Comic Neue', cursive;
+            font-size: 1.2rem;
+            padding: 15px;
+            background: #fffde7;
+            border: 2px dashed var(--accent);
+            border-radius: 10px;
+        }
+
+        /* Feedback */
+        .feedback {
+            margin-top: 20px;
+            font-weight: bold;
+            font-family: 'Bangers', cursive;
+            font-size: 1.6rem;
+            letter-spacing: 1px;
+            text-align: center;
+            padding: 15px;
+            border-radius: 10px;
+            border: 3px solid black;
+            box-shadow: 3px 3px 0 rgba(0,0,0,0.1);
+        }
+
+        .correct {
+            color: #2E7D32;
+            background: #dcedc8;
+        }
+
+        .incorrect {
+            color: var(--highlight);
+            background: #ffebee;
+        }
+
+        /* Completion Message */
+        .completion-message {
+            text-align: center;
+            padding: 30px;
+            background: white;
+            border-radius: 15px;
+            border: 4px solid black;
+            box-shadow: 8px 8px 0 rgba(0,0,0,0.2);
+            display: none;
+        }
+
+        .completion-message h2 {
+            font-family: 'Bangers', cursive;
+            font-size: 3rem;
+            color: var(--primary);
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            text-shadow: 3px 3px 0 rgba(0,0,0,0.1);
+        }
+
+        .completion-message p {
+            font-family: 'Comic Neue', cursive;
+            font-size: 1.4rem;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        #completion-time {
+            font-family: 'Bangers', cursive;
+            font-size: 1.8rem;
+            color: var(--highlight);
+            letter-spacing: 1px;
+            margin: 20px 0;
+        }
+
+        #completion-stats {
+            font-family: 'Comic Neue', cursive;
+            font-size: 1.3rem;
+            background: #f5f5f5;
+            padding: 15px;
+            border-radius: 10px;
+            border: 2px solid black;
+        }
+
+        /* Action Elements */
+        .action-line {
+            font-family: 'Bangers', cursive;
+            color: var(--highlight);
+            transform-origin: center;
+            text-shadow: 2px 2px 0 black;
+            letter-spacing: 2px;
+            font-size: 1.8rem;
+            margin: 1.5rem 0;
+            position: relative;
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
+            background: transparent;
+            animation: actionPulse 2s infinite;
+            text-align: center;
+            width: 100%;
+        }
+
+        .action-line::before {
+            content: "★";
+            position: absolute;
+            left: -10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--splash3);
+            text-shadow: 1px 1px 0 black;
+        }
+
+        .action-line::after {
+            content: "★";
+            position: absolute;
+            right: -10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--splash3);
+            text-shadow: 1px 1px 0 black;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .controls {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .comic-button {
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            .button-group {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="crt-effect"></div>
+    
+    <div class="comic-container">
+        <header>
+            <h1>UW TACOMA SCAVENGER HUNT</h1>
+            <p class="subtitle">Explore the campus and uncover hidden treasures!</p>
+        </header>
+
+        <div class="game-container">
+            <div class="controls">
+                <button id="start-btn" class="comic-button">Start Game</button>
+                <button id="reset-btn" class="comic-button">Reset Game</button>
+            </div>
+
+            <div class="timer" id="timer">TIME: 00:00</div>
+
+            <div class="progress-container">
+                <p class="progress-text" id="progress-text">PROGRESS: 0/8 LOCATIONS FOUND</p>
+                <div class="progress-bar">
+                    <div class="progress" id="progress"></div>
+                </div>
+            </div>
+
+            <div id="clue-section" style="display: none;">
+                <div class="action-line">FIND THE LOCATION!</div>
+                
+                <div class="clue-container">
+                    <h2 class="clue-title" id="clue-title">LOCATION 1</h2>
+                    <p class="clue-text" id="clue-text">Clue text will appear here...</p>
+                    
+                    <div class="answer-container">
+                        <input type="text" id="answer-input" placeholder="ENTER YOUR ANSWER...">
+                        <div class="button-group">
+                            <button id="submit-btn" class="comic-button">SUBMIT</button>
+                            <button id="hint-btn" class="comic-button hint-btn">GET HINT</button>
+                        </div>
+                        <p id="hint-text" class="hint-text">Hint will appear here...</p>
+                        <p id="feedback" class="feedback"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="completion-message" class="completion-message">
+                <h2>CONGRATULATIONS!</h2>
+                <p>You've completed the UW Tacoma Campus Scavenger Hunt!</p>
+                <p id="completion-time"></p>
+                <p id="completion-stats"></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Game data
+            const locations = [
+                {
+                    title: "Prairie Line Trail",
+                    clue: "Once trains ran through campus on this path, now transformed into a beautiful pedestrian walkway. Find the place where history meets modern campus life.",
+                    hint: "Look for the railway tracks embedded in this walking path that runs through campus.",
+                    answers: ["prairie line trail", "prairie line", "the prairie line trail", "the prairie line"]
+                },
+                {
+                    title: "William W. Philip Hall",
+                    clue: "I'm the heart of campus events, with a glass front facing Pacific Avenue. Students gather here for orientation, ceremonies, and campus-wide celebrations.",
+                    hint: "This building is named after a former Tacoma mayor and is often used for large campus gatherings.",
+                    answers: ["william w philip hall", "philip hall", "william philip hall", "philip", "william w. philip hall", "william philip", "w.w. philip hall"]
+                },
+                {
+                    title: "Snoqualmie Building",
+                    clue: "I house the School of Education and am named after a local Native American tribe. Find me by searching for ancient knowledge in a renovated industrial space.",
+                    hint: "This building is located on the west side of campus and shares its name with a famous waterfall in Washington.",
+                    answers: ["snoqualmie building", "snoqualmie", "the snoqualmie building"]
+                },
+                {
+                    title: "Grand Staircase",
+                    clue: "I connect downtown Tacoma to the UW campus. Climb my 80+ steps from Pacific Avenue for a workout and panoramic views of Commencement Bay.",
+                    hint: "These steps lead from Pacific Avenue up to campus and are the most prominent stairway at UW Tacoma.",
+                    answers: ["grand staircase", "the grand staircase", "grand stairs", "the grand stairs", "main staircase", "campus staircase"]
+                },
+                {
+                    title: "Tioga Library Building",
+                    clue: "Knowledge lives within my walls, and students come to study and research. Find me with my distinctive clock tower visible from many parts of campus.",
+                    hint: "This building houses the campus library and has a distinctive clock tower on top.",
+                    answers: ["tioga library", "tioga library building", "tioga", "the tioga library", "library", "uw tacoma library"]
+                },
+                {
+                    title: "Cherry Parkes",
+                    clue: "Many business classes are held in this renovated warehouse. My name combines two different buildings, and I'm known for exposed brick walls and timber beams.",
+                    hint: "This building houses the Milgard School of Business and has a hyphenated name.",
+                    answers: ["cherry parkes", "cherry-parkes", "cherry parkes building", "cp"]
+                },
+                {
+                    title: "The Mattress Factory",
+                    clue: "Once I manufactured places to sleep, now I house IT services and art spaces. My industrial past is still visible in my name and architecture.",
+                    hint: "This building was literally once a factory that made mattresses before being converted for campus use.",
+                    answers: ["mattress factory", "the mattress factory", "mat fac", "mattress factory building"]
+                },
+                {
+                    title: "Joy Building",
+                    clue: "Housing UW Tacoma's School of Engineering & Technology, my name might bring happiness. Find me at the south end of campus.",
+                    hint: "This building houses technology and engineering programs and its name is a single, positive emotion.",
+                    answers: ["joy building", "joy", "the joy building"]
+                }
+            ];
+
+            // Game state
+            let currentLocation = 0;
+            let startTime = null;
+            let timerInterval = null;
+            let foundLocations = 0;
+            let hints = Array(locations.length).fill(false);
+            let nextLocationTimeout = null; // Store timeout ID
+            let isTransitioning = false;    // Flag to track transition state
+
+            // DOM elements
+            const startBtn = document.getElementById('start-btn');
+            const resetBtn = document.getElementById('reset-btn');
+            const clueSection = document.getElementById('clue-section');
+            const clueTitle = document.getElementById('clue-title');
+            const clueText = document.getElementById('clue-text');
+            const answerInput = document.getElementById('answer-input');
+            const submitBtn = document.getElementById('submit-btn');
+            const hintBtn = document.getElementById('hint-btn');
+            const hintText = document.getElementById('hint-text');
+            const feedback = document.getElementById('feedback');
+            const timerElement = document.getElementById('timer');
+            const progressText = document.getElementById('progress-text');
+            const progressBar = document.getElementById('progress');
+            const completionMessage = document.getElementById('completion-message');
+            const completionTime = document.getElementById('completion-time');
+            const completionStats = document.getElementById('completion-stats');
+
+            // Event listeners
+            startBtn.addEventListener('click', startGame);
+            resetBtn.addEventListener('click', resetGame);
+            submitBtn.addEventListener('click', checkAnswer);
+            hintBtn.addEventListener('click', showHint);
+            answerInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    checkAnswer();
+                }
+            });
+
+            // Functions
+            function startGame() {
+                clueSection.style.display = 'block';
+                startBtn.disabled = true;
+                startTime = new Date();
+                timerInterval = setInterval(updateTimer, 1000);
+                loadLocation(currentLocation);
+            }
+
+            function resetGame() {
+                currentLocation = 0;
+                foundLocations = 0;
+                hints = Array(locations.length).fill(false);
+                startBtn.disabled = false;
+                clearInterval(timerInterval);
+                if (nextLocationTimeout) {
+                    clearTimeout(nextLocationTimeout);
+                    nextLocationTimeout = null;
+                }
+                timerElement.textContent = 'TIME: 00:00';
+                clueSection.style.display = 'none';
+                completionMessage.style.display = 'none';
+                progressText.textContent = `PROGRESS: ${foundLocations}/${locations.length} LOCATIONS FOUND`;
+                progressBar.style.width = '0%';
+                hintText.style.display = 'none';
+                feedback.textContent = '';
+                isTransitioning = false;
+                submitBtn.disabled = false;
+                hintBtn.disabled = false;
+            }
+
+            function loadLocation(index) {
+                if (index >= locations.length) {
+                    endGame();
+                    return;
+                }
+
+                const location = locations[index];
+                clueTitle.textContent = `LOCATION ${index + 1}`;
+                clueText.textContent = location.clue;
+                answerInput.value = '';
+                hintText.textContent = location.hint;
+                hintText.style.display = 'none';
+                feedback.textContent = '';
+                answerInput.focus();
+                isTransitioning = false;
+                submitBtn.disabled = false;
+                hintBtn.disabled = false;
+            }
+
+            function checkAnswer() {
+                if (isTransitioning) return;
+                
+                const userAnswer = answerInput.value.trim().toLowerCase();
+                const correctAnswers = locations[currentLocation].answers;
+                
+                if (correctAnswers.includes(userAnswer)) {
+                    isTransitioning = true;
+                    submitBtn.disabled = true;
+                    hintBtn.disabled = true;
+                    
+                    feedback.className = 'feedback correct';
+                    feedback.textContent = `CORRECT! YOU FOUND ${locations[currentLocation].title.toUpperCase()}!`;
+                    foundLocations++;
+                    updateProgress();
+                    
+                    nextLocationTimeout = setTimeout(() => {
+                        currentLocation++;
+                        loadLocation(currentLocation);
+                    }, 1500);
+                } else {
+                    feedback.className = 'feedback incorrect';
+                    feedback.textContent = 'THAT\'S NOT CORRECT. TRY AGAIN!';
+                }
+            }
+
+            function showHint() {
+                if (isTransitioning) return;
+                
+                hintText.style.display = 'block';
+                hints[currentLocation] = true;
+            }
+
+            function updateProgress() {
+                progressText.textContent = `PROGRESS: ${foundLocations}/${locations.length} LOCATIONS FOUND`;
+                const percentage = (foundLocations / locations.length) * 100;
+                progressBar.style.width = `${percentage}%`;
+            }
+
+            function updateTimer() {
+                const now = new Date();
+                const elapsedTime = Math.floor((now - startTime) / 1000);
+                const minutes = Math.floor(elapsedTime / 60).toString().padStart(2, '0');
+                const seconds = (elapsedTime % 60).toString().padStart(2, '0');
+                timerElement.textContent = `TIME: ${minutes}:${seconds}`;
+            }
+
+            function formatTime(seconds) {
+                const minutes = Math.floor(seconds / 60).toString().padStart(2, '0');
+                const secs = (seconds % 60).toString().padStart(2, '0');
+                return `${minutes}:${secs}`;
+            }
+
+            function endGame() {
+                clearInterval(timerInterval);
+                if (nextLocationTimeout) {
+                    clearTimeout(nextLocationTimeout);
+                }
+                clueSection.style.display = 'none';
+                completionMessage.style.display = 'block';
+                
+                const endTime = new Date();
+                const totalTime = Math.floor((endTime - startTime) / 1000);
+                completionTime.textContent = `YOU COMPLETED THE HUNT IN ${formatTime(totalTime)}!`;
+                
+                const totalHints = hints.filter(Boolean).length;
+                completionStats.textContent = `You used ${totalHints} hint${totalHints !== 1 ? 's' : ''} during your adventure!`;
+            }
+        });
+    </script>
+</body>
+</html>
