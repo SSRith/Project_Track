@@ -86,16 +86,23 @@
 }
         
         
-        .comic-title {
-            font-family: 'Bangers', cursive;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: var(--primary);
-            text-shadow: none;
-            -webkit-text-stroke: 0;
-            text-stroke: 0;
-            letter-spacing: 4px;
-        }
+.comic-title {
+    font-family: 'Bangers', cursive;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--primary);
+    text-shadow: none;
+    -webkit-text-stroke: 0;
+    text-stroke: 0;
+    letter-spacing: 4px;
+}
+
+.comic-panel.bg-\[\#FFDE00\] p {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
+    font-size: 1.2rem;
+    line-height: 1.3;
+}
 
 
         .comic-title.animate-bounce {
