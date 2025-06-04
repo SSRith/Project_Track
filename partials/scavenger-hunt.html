@@ -1,12 +1,11 @@
-<!-- Scavenger Hunt Section - Added with proper spacing -->
 <div class="comic-panel md:col-span-2 p-6 mt-12 mb-12 bg-[#4CAF50]">
     <h3 class="comic-title text-4xl mb-4 text-[#5f2872]">SCAVENGER HUNT</h3>
     <div class="flex flex-col md:flex-row items-center gap-6">
-                <!-- Text Content -->
+        <!-- Text Content -->
         <div class="comic-panel p-16 bg-[#FFDE00] flex-1">
             <p class="text-xl mb-4">
-                Embark on an adventure across campus! Our scavenger hunt challenges you to uncover hidden gems, 
-                solve puzzles, and learn about UW Tacoma's history and landmarks. Perfect for new students and visitors!
+                Embark on an adventure across campus! Our scavenger hunt challenges you to uncover hidden resources, 
+                and learn about UW Tacoma's history and landmarks. Perfect for new students!
             </p>
         </div>
         <!-- Image Container -->
@@ -19,11 +18,32 @@
         </div>
     </div>
     <br>
-        <!-- Embedded Scavenger Hunt Game -->
-        <div class="max-w-4xl ml-auto w-full">
+    <!-- Modified Section: Added comic text box -->
+    <div class="flex flex-col md:flex-row gap-2 max-w-9xl ml-auto w-full items-stretch">
+        <!-- New Comic Text Box (Left Side) -->
+        <div class="comic-panel p-8 bg-[#c6dfc6] flex-1 flex flex-col">
+            <h4 class="text-2xl font-bold mb-4">More Details:</h4>
+            <p class="text-lg">
+            This hunt is available whenever you’re ready to dive in and explore, 
+            though participating is entirely up to you.<br>
+            <br>
+            However, we strongly encourage you to take part in this thrilling quest, especially 
+            since your tuition is helping to fund these amazing resources. Familiarizing yourself 
+            with what UW Tacoma has to offer will not only enhance your experience but also empower 
+            you to make the most out of your time here!<br>
+            <br>
+            **Pro Tip:** As you navigate the hunt and tackle each question, keep your eyes peeled for 
+            "unexpected" answers. The answers are words near the resources itself. This hunt is designed for in-person exploration.
+            </p>
+        </div>
+        
+        <!-- Embedded Scavenger Hunt Game (Right Side) -->
+        <div class="flex-[2]">
             <iframe 
                 src="uw-tacoma-scavenger-hunt.html" 
                 class="w-full h-[600px] border-4 border-[#4B2E83] rounded-lg"
                 title="UW Tacoma Scavenger Hunt"
             ></iframe>
         </div>
+    </div>
+</div>

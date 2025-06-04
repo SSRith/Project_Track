@@ -2,7 +2,28 @@
     <div class="comic-panel p-6 mb-8 relative">
         <div class="halftone"></div>
         <h2 class="comic-title text-4xl mb-4">CAMPUS BUILDINGS</h2>
-        <p class="text-lg mb-4">Each building has its own superpowers to help you succeed!</p>
+
+        <div class="comic-panel md:col-span-2 p-6 mt-12 mb-12 bg-[#fd6363]">
+            <div class="flex flex-col md:flex-row items-center gap-6">
+
+            <!-- Image Container -->
+                <div class="flex-1">
+                    <img 
+                        src="building.png" 
+                        alt="UW Tacoma" 
+                        class="w-full h-auto rounded-lg border-4 border-[#4B2E83]"
+                    >
+                </div>
+
+                <!-- Text Content -->
+                <div class="comic-panel p-16 bg-[#FFDE00] flex-1">
+                    <p class="text-xl mb-4">
+                    This section provides detailed information about each building on campus. Click 
+                    "Learn More" to explore descriptions, architectural highlights, and unique features, 
+                    along with a gallery of photos.</p>
+                </div>
+            </div>
+        </div>
         
         <div id="building-BB" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <!-- Building 1 -->
@@ -13,11 +34,17 @@
                 </div>
                 <p class="font-bold">DETAILS:</p>
                 <ul class="list-disc pl-5">
-                    <li>Classrooms</li>
-                    <li>Computer Labs</li>
-                    <li>Study Spaces</li>
+                    <li>Classrooms for general education courses</li>
+                    <li>Faculty offices and meeting rooms</li>
+                    <li>Student study lounges</li>
                 </ul>
-                <button class="comic-button mt-2" onclick="showGallery('BB')">LEARN MORE</button>
+                <button 
+                    class="comic-button mt-2" 
+                    onclick="showGallery('BB')"
+                    style="background-color: red; color: white;"
+                    >
+                    LEARN MORE
+                </button>
             </div>
             
             <!-- Building 2 -->
@@ -28,11 +55,17 @@
                 </div>
                 <p class="font-bold">DETAILS:</p>
                 <ul class="list-disc pl-5">
-                    <li>Classrooms</li>
-                    <li>Computer Labs</li>
-                    <li>Study Spaces</li>
+                    <li>Agricultural science classrooms and labs</li>
+                    <li>Research facilities focused on plant sciences</li>
+                    <li>Student advising and resource center</li>
                 </ul>
-                <button class="comic-button mt-2" onclick="showGallery('BHS')">LEARN MORE</button>
+                <button 
+                    class="comic-button mt-2" 
+                    onclick="showGallery('BHS')"
+                    style="background-color: red; color: white;"
+                    >
+                    LEARN MORE
+                </button>
             </div>
             
             <!-- Building 3 -->
@@ -43,11 +76,17 @@
                 </div>
                 <p class="font-bold">DETAILS:</p>
                 <ul class="list-disc pl-5">
-                    <li>Computer Science</li>
-                    <li>Engineering</li>
-                    <li>Technology Labs</li>
+                    <li>Computer labs with advanced software</li>
+                    <li>Collaborative learning spaces</li>
+                    <li>Faculty offices for tech-related departments</li>
                 </ul>
-                <button class="comic-button mt-2" onclick="showGallery('CP')">LEARN MORE</button>
+                <button 
+                    class="comic-button mt-2" 
+                    onclick="showGallery('CP')"
+                    style="background-color: red; color: white;"
+                    >
+                    LEARN MORE
+                </button>
             </div>
             
             <!-- Building 4 -->
@@ -58,11 +97,17 @@
                 </div>
                 <p class="font-bold">DETAILS:</p>
                 <ul class="list-disc pl-5">
-                    <li>Housing/Dorm</li>
-                    <li>Table Top Tennis Meetup</li>
-                    <li>Food & Dining</li>
+                    <li>On-campus student apartments</li>
+                    <li>Common areas and recreational rooms</li>
+                    <li>Laundry and mail services</li>
                 </ul>
-                <button class="comic-button mt-2" onclick="showGallery('Court17')">LEARN MORE</button>
+                <button 
+                    class="comic-button mt-2" 
+                    onclick="showGallery('Court17')"
+                    style="background-color: red; color: white;"
+                    >
+                    LEARN MORE
+                </button>
             </div>
             
             <!-- Building 5 -->
@@ -73,11 +118,17 @@
                 </div>
                 <p class="font-bold">DETAILS:</p>
                 <ul class="list-disc pl-5">
-                    <li>Science Labs</li>
-                    <li>Research</li>
-                    <li>STEM Resources</li>
+                    <li>Lecture halls and seminar rooms</li>
+                    <li>Academic advising offices</li>
+                    <li>Tutoring and student support services</li>
                 </ul>
-                <button class="comic-button mt-2" onclick="showGallery('DOU')">LEARN MORE</button>
+                <button 
+                    class="comic-button mt-2" 
+                    onclick="showGallery('DOU')"
+                    style="background-color: red; color: white;"
+                    >
+                    LEARN MORE
+                </button>
             </div>
             
             <!-- Building 6 -->
@@ -88,11 +139,17 @@
                 </div>
                 <p class="font-bold">DETAILS:</p>
                 <ul class="list-disc pl-5">
-                    <li>Student Advising</li>
-                    <li>Classroom</li>
-                    <li>UW Tacoma Shop</li>
+                    <li>Classrooms for humanities and social sciences</li>
+                    <li>Faculty offices and conference rooms</li>
+                    <li>Student resource center and study areas</li>
                 </ul>
-                <button class="comic-button mt-2" onclick="showGallery('GWP')">LEARN MORE</button>
+                <button 
+                    class="comic-button mt-2" 
+                    onclick="showGallery('GWP')"
+                    style="background-color: red; color: white;"
+                    >
+                    LEARN MORE
+                </button>
             </div>
 
             <!-- Building 7
@@ -102,9 +159,19 @@
                     <img src="images/gallery/har/har1.jpg" alt="Harmon" class="w-full h-40 object-cover rounded mb-2 border-2 border-black">
                 </div>
                 <ul class="list-disc pl-5">
+                    <li>Science labs and classrooms</li>
+                    <li>Faculty research offices</li>
+                    <li>Equipment storage and prep rooms</li>
                 </ul>
-                <button class="comic-button mt-2" onclick="showGallery('HAR')">LEARN MORE</button>
-            </div> -->
+                <button 
+                    class="comic-button mt-2" 
+                    onclick="showGallery('HAR')"
+                    style="background-color: red; color: white;"
+                    >
+                    LEARN MORE
+                </button>
+            </div>
+
 
             <!-- Building 8 -->
             <div id="building-JOY" class="comic-panel p-4 hover:scale-105 transition-transform">
@@ -114,11 +181,17 @@
                 </div>
                 <p class="font-bold">DETAILS:</p>
                 <ul class="list-disc pl-5">
-                    <li>Classrooms</li>
-                    <li>Research</li>
-                    <li>STEM Resources</li>
+                    <li>Engineering workshops and labs</li>
+                    <li>Computer-aided design studios</li>
+                    <li>Faculty and technical support offices</li>
                 </ul>
-                <button class="comic-button mt-2" onclick="showGallery('JOY')">LEARN MORE</button>
+                <button 
+                    class="comic-button mt-2" 
+                    onclick="showGallery('JOY')"
+                    style="background-color: red; color: white;"
+                    >
+                    LEARN MORE
+                </button>
             </div>
 
             <!-- Building 9 -->
@@ -129,11 +202,18 @@
                 </div>
                 <p class="font-bold">DETAILS:</p>
                 <ul class="list-disc pl-5">
+
                     <li>Classrooms</li>
                     <li>Auditorium</li>
                     <li>Faculty Offices</li>
                 </ul>
-                <button class="comic-button mt-2" onclick="showGallery('KEY')">LEARN MORE</button>
+                <button 
+                    class="comic-button mt-2" 
+                    onclick="showGallery('KEY')"
+                    style="background-color: red; color: white;"
+                    >
+                    LEARN MORE
+                </button>
             </div>
 
             <!-- Building 10 -->
@@ -146,7 +226,13 @@
                 <ul class="list-disc pl-5">
                     <li>Faculty Offices</li>
                 </ul>
-                <button class="comic-button mt-2" onclick="showGallery('LBH')">LEARN MORE</button>
+                <button 
+                    class="comic-button mt-2" 
+                    onclick="showGallery('LBH')"
+                    style="background-color: red; color: white;"
+                    >
+                    LEARN MORE
+                </button>
             </div>
 
             <!-- Building 11 -->
@@ -161,7 +247,13 @@
                     <li>Food Cupboard & student resources</li>
                     <li>Offices: NextGen, Post-Prison, Career Development</li>
                 </ul>
-                <button class="comic-button mt-2" onclick="showGallery('MAT')">LEARN MORE</button>
+                <button 
+                    class="comic-button mt-2" 
+                    onclick="showGallery('MAT')"
+                    style="background-color: red; color: white;"
+                    >
+                    LEARN MORE
+                </button>
             </div>
 
             <!-- Building 12 -->
@@ -172,11 +264,17 @@
                 </div>
                 <p class="font-bold">DETAILS:</p>
                 <ul class="list-disc pl-5">
-                    <li>Science Labs</li>
-                    <li>Research</li>
-                    <li>STEM Resources</li>
+                    <li>Language labs and classrooms</li>
+                    <li>Faculty offices for language departments</li>
+                    <li>Cultural resource and exchange centers</li>
                 </ul>
-                <button class="comic-button mt-2" onclick="showGallery('MDS')">LEARN MORE</button>
+                <button 
+                    class="comic-button mt-2" 
+                    onclick="showGallery('MDS')"
+                    style="background-color: red; color: white;"
+                    >
+                    LEARN MORE
+                </button>
             </div>
 
             <!-- Building 13 -->
@@ -187,11 +285,17 @@
                 </div>
                 <p class="font-bold">DETAILS:</p>
                 <ul class="list-disc pl-5">
-                    <li>Science Labs</li>
-                    <li>Research</li>
-                    <li>STEM Resources</li>
+                    <li>Business school classrooms and seminar rooms</li>
+                    <li>Computer labs with business software</li>
+                    <li>Career services and internship offices</li>
                 </ul>
-                <button class="comic-button mt-2" onclick="showGallery('MLG')">LEARN MORE</button>
+                <button 
+                    class="comic-button mt-2" 
+                    onclick="showGallery('MLG')"
+                    style="background-color: red; color: white;"
+                    >
+                    LEARN MORE
+                </button>
             </div>
 
             <!-- Building 14 -->
@@ -202,11 +306,17 @@
                 </div>
                 <p class="font-bold">DETAILS:</p>
                 <ul class="list-disc pl-5">
-                    <li>Science Labs</li>
-                    <li>Research</li>
-                    <li>STEM Resources</li>
+                    <li>Psychology and social science labs</li>
+                    <li>Counseling and research offices</li>
+                    <li>Group study and project rooms</li>
                 </ul>
-                <button class="comic-button mt-2" onclick="showGallery('WPH')">LEARN MORE</button>
+                <button 
+                    class="comic-button mt-2" 
+                    onclick="showGallery('WPH')"
+                    style="background-color: red; color: white;"
+                    >
+                    LEARN MORE
+                </button>
             </div>
 
             <!-- Building 15 -->
@@ -217,11 +327,17 @@
                 </div>
                 <p class="font-bold">DETAILS:</p>
                 <ul class="list-disc pl-5">
-                    <li>Science Labs</li>
-                    <li>Research</li>
-                    <li>STEM Resources</li>
+                    <li>Computer science and IT labs</li>
+                    <li>Faculty offices and research centers</li>
+                    <li>Student innovation and maker spaces</li>
                 </ul>
-                <button class="comic-button mt-2" onclick="showGallery('PNK')">LEARN MORE</button>
+                <button 
+                    class="comic-button mt-2" 
+                    onclick="showGallery('PNK')"
+                    style="background-color: red; color: white;"
+                    >
+                    LEARN MORE
+                </button>
             </div>
 
             <!-- Building 16 -->
@@ -232,11 +348,17 @@
                 </div>
                 <p class="font-bold">DETAILS:</p>
                 <ul class="list-disc pl-5">
-                    <li>Science Labs</li>
-                    <li>Research</li>
-                    <li>STEM Resources</li>
+                    <li>Multi-disciplinary science labs</li>
+                    <li>Lecture halls equipped with advanced tech</li>
+                    <li>Faculty offices for STEM departments</li>
                 </ul>
-                <button class="comic-button mt-2" onclick="showGallery('SCI')">LEARN MORE</button>
+                <button 
+                    class="comic-button mt-2" 
+                    onclick="showGallery('SCI')"
+                    style="background-color: red; color: white;"
+                    >
+                    LEARN MORE
+                </button>
             </div>
 
             <!-- Building 17 -->
@@ -247,11 +369,17 @@
                 </div>
                 <p class="font-bold">DETAILS:</p>
                 <ul class="list-disc pl-5">
-                    <li>Science Labs</li>
-                    <li>Research</li>
-                    <li>STEM Resources</li>
+                    <li>Environmental studies classrooms and labs</li>
+                    <li>Resource center for sustainability initiatives</li>
+                    <li>Outdoor learning and research coordination</li>
                 </ul>
-                <button class="comic-button mt-2" onclick="showGallery('SNO')">LEARN MORE</button>
+                <button 
+                    class="comic-button mt-2" 
+                    onclick="showGallery('SNO')"
+                    style="background-color: red; color: white;"
+                    >
+                    LEARN MORE
+                </button>
             </div>
 
             <!-- Building 18 -->
@@ -262,11 +390,17 @@
                 </div>
                 <p class="font-bold">DETAILS:</p>
                 <ul class="list-disc pl-5">
-                    <li>Science Labs</li>
-                    <li>Research</li>
-                    <li>STEM Resources</li>
+                    <li>Humanities classrooms and seminar rooms</li>
+                    <li>Faculty offices for literature and history</li>
+                    <li>Writing and tutoring centers</li>
                 </ul>
-                <button class="comic-button mt-2" onclick="showGallery('TPS')">LEARN MORE</button>
+                <button 
+                    class="comic-button mt-2" 
+                    onclick="showGallery('TPS')"
+                    style="background-color: red; color: white;"
+                    >
+                    LEARN MORE
+                </button>
             </div>
 
             <!-- Building 19 -->
@@ -277,11 +411,17 @@
                 </div>
                 <p class="font-bold">DETAILS:</p>
                 <ul class="list-disc pl-5">
-                    <li>Science Labs</li>
-                    <li>Research</li>
-                    <li>STEM Resources</li>
+                    <li>Main campus library with study rooms</li>
+                    <li>Computer access and printing services</li>
+                    <li>Archives and special collections</li>
                 </ul>
-                <button class="comic-button mt-2" onclick="showGallery('TLB')">LEARN MORE</button>
+                <button 
+                    class="comic-button mt-2" 
+                    onclick="showGallery('TLB')"
+                    style="background-color: red; color: white;"
+                    >
+                    LEARN MORE
+                </button>
             </div>
 
             <!-- Building 20 -->
@@ -292,11 +432,17 @@
                 </div>
                 <p class="font-bold">DETAILS:</p>
                 <ul class="list-disc pl-5">
-                    <li>Science Labs</li>
-                    <li>Research</li>
-                    <li>STEM Resources</li>
+                    <li>Student union with dining and retail</li>
+                    <li>Meeting rooms, gym, and event spaces</li>
+                    <li>Student government and club offices</li>
                 </ul>
-                <button class="comic-button mt-2" onclick="showGallery('UWY')">LEARN MORE</button>
+                <button 
+                    class="comic-button mt-2" 
+                    onclick="showGallery('UWY')"
+                    style="background-color: red; color: white;"
+                    >
+                    LEARN MORE
+                </button>
             </div>
 
             <!-- Building 21 -->
@@ -307,11 +453,17 @@
                 </div>
                 <p class="font-bold">DETAILS:</p>
                 <ul class="list-disc pl-5">
-                    <li>Science Labs</li>
-                    <li>Research</li>
-                    <li>STEM Resources</li>
+                    <li>Mathematics and statistics classrooms</li>
+                    <li>Computer labs with analytical software</li>
+                    <li>Faculty research and collaboration spaces</li>
                 </ul>
-                <button class="comic-button mt-2" onclick="showGallery('WG')">LEARN MORE</button>
+                <button 
+                    class="comic-button mt-2" 
+                    onclick="showGallery('WG')"
+                    style="background-color: red; color: white;"
+                    >
+                    LEARN MORE
+                </button>
             </div>
 
             <!-- Building 22 -->
@@ -322,11 +474,17 @@
                 </div>
                 <p class="font-bold">DETAILS:</p>
                 <ul class="list-disc pl-5">
-                    <li>Science Labs</li>
-                    <li>Research</li>
-                    <li>STEM Resources</li>
+                    <li>Campus convenience store and cafe</li>
+                    <li>Lounge areas and informal meeting spots</li>
+                    <li>Student resource distribution center</li>
                 </ul>
-                <button class="comic-button mt-2" onclick="showGallery('WCG')">LEARN MORE</button>
+                <button 
+                    class="comic-button mt-2" 
+                    onclick="showGallery('WSG')"
+                    style="background-color: red; color: white;"
+                    >
+                    LEARN MORE
+                </button>
             </div>
 
 
@@ -338,11 +496,17 @@
                 </div>
                 <p class="font-bold">DETAILS:</p>
                 <ul class="list-disc pl-5">
-                    <li>Science Labs</li>
-                    <li>Research</li>
-                    <li>STEM Resources</li>
+                    <li>Performing arts theater and rehearsal spaces</li>
+                    <li>Dance studios and costume shops</li>
+                    <li>Faculty offices for theater and dance departments</li>
                 </ul>
-                <button class="comic-button mt-2" onclick="showGallery('WHT')">LEARN MORE</button>
+                <button 
+                    class="comic-button mt-2" 
+                    onclick="showGallery('WHT')"
+                    style="background-color: red; color: white;"
+                    >
+                    LEARN MORE
+                </button>
             </div>
         </div>
     </div>
