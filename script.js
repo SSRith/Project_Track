@@ -142,25 +142,25 @@ function showBuildingInfo(code) {
   window.buildings = {
   BB: {
     name: "Birmingham Block",
-    description: "Features classrooms, computer labs, and study spaces.",
+    description: "Here is where the Huskies pass on through from GWP to BHS!",
     image: "images/gallery/bb/bb1.jpg",
     link: "#building-BB"
   },
   BHS: {
     name: "Birmingham Hay & Seed",
-    description: "Home to student services, advising, and registration.",
+    description: "This building is home to study spaces and big auditorium style rooms, where Huskies can gather and study!",
     image: "images/gallery/bhs/bhs1.jpg",
     link: "#building-BHS"
   },
   CP: {
     name: "Cherry Parkes",
-    description: "Focuses on Computer Science, Engineering, and Tech Labs.",
+    description: "The tech-saavy Huskies gather here to build and program in the many Computer, Tech & Media Labs found here!",
     image: "images/gallery/cp/cp1.jpg",
     link: "#building-CP"
   },
   Court17: {
     name: "Court 17 Student Housing",
-    description: "Student housing.",
+    description: "Every Husky needs a home base! Here is where the Huskies live and sleep!",
     image: "images/gallery/court17/court1.jpg",
     link: "#building-Court17"
   },
@@ -172,7 +172,7 @@ function showBuildingInfo(code) {
   },
   GWP: {
     name: "Garretson Woodruff & Pratt",
-    description: "Library, study rooms, and research help.",
+    description: "If there are any Huskies in need of Academic Guidance, give GWP a visit! Academic Advising Offices are located here!",
     image: "images/gallery/gwp/gwp1.jpg",
     link: "#building-GWP"
   },
@@ -184,97 +184,97 @@ function showBuildingInfo(code) {
   },
   JOY: {
     name: "Russell T. Joy",
-    description: "Houses lecture halls and general classrooms.",
+    description: "Connected to the WCG building, the JOY building is where a multitude of classrooms are!",
     image: "images/gallery/joy/joy1.jpg",
     link: "#building-JOY"
   },
   KEY: {
     name: "Keystone",
-    description: "Science and research labs.",
+    description: "Home of the beautiful Carwein Auditorium!",
     image: "images/gallery/key/key1.jpg",
     link: "#building-KEY"
   },
   LBH: {
     name: "Laborers Hall",
-    description: "STEM resources and research rooms.",
+    description: "Located next to the UWY, this small building is currently not in use to Huskies but is more for construction workers.",
     image: "images/gallery/lbh/lbh1.jpg",
     link: "#building-LBH"
   },
   MAT: {
     name: "Mattress Factory",
-    description: "Labs and experimental workspaces.",
+    description: "The main hub for Husky Relaxation! Here, the Dawg House welcomes Huskies with billiards, video games and a hot dog restauraunt built right into the Building!",
     image: "images/gallery/mat/mat1.jpg",
     link: "#building-MAT"
   },
   MDS: {
     name: "McDonald Smith",
-    description: "Science and research-related classrooms.",
+    description: "Connected to the Cherry Parkes building, this is where the Campus Safety & Transportation Services Offices are located!",
     image: "images/gallery/mds/mds1.jpg",
     link: "#building-MDS"
   },
   MLG: {
     name: "Milgard Hall",
-    description: "STEM and business hub.",
+    description: "The Business Major Huskies gather here! With centers for Business Analytics, Accounting & Success!",
     image: "images/gallery/mlg/mlg1.jpg",
     link: "#building-MLG"
   },
   WPH: {
     name: "William W. Philip Hall",
-    description: "Public events and STEM programs.",
+    description: "This is where large scale conferences and events are held. Huskies Assemble!",
     image: "images/gallery/wph/wph1.jpg",
     link: "#building-WPH"
   },
   PNK: {
     name: "Pinkerton",
-    description: "Home to advanced labs and classrooms.",
+    description: "If you're a Husky focused on Urban Studies and in need of advising, give this building a visit!",
     image: "images/gallery/pnk/pnk1.jpg",
     link: "#building-PNK"
   },
   SCI: {
     name: "Science Building",
-    description: "Dedicated to scientific research and education.",
+    description: "If you are a Husky with a science related major, you will love to visit here! Filled to the brim with Science labs, ranging from Chemistry to Biology, to Physics to Geology!",
     image: "images/gallery/sci/sci1.jpg",
     link: "#building-SCI"
   },
   SNO: {
     name: "Snoqualmie Building",
-    description: "Linked to academic services and research.",
+    description: "With a Makers space, reading room, and center for student involvement in equality, the SNO building welcomes all huskies with open paws!",
     image: "images/gallery/sno/sno1.jpg",
     link: "#building-SNO"
   },
   TPS: {
     name: "Tacoma Paper & Stationery",
-    description: "Facilities for STEM and innovation.",
+    description: "Feeling hungry or need to study? Come grab a bite to eat at the Student Convenience Store and come hang out or study at the commons!",
     image: "images/gallery/tps/tps1.jpg",
     link: "#building-TPS"
   },
   TLB: {
     name: "Tioga Library Building",
-    description: "Library services and quiet study areas.",
+    description: "Shh... this is where the Library is, where our studious Huskies read & study",
     image: "images/gallery/tlb/tlb1.jpg",
     link: "#building-TLB"
   },
   UWY: {
     name: "University Y Student Center",
-    description: "Student recreation, fitness, and services.",
+    description: "This building has it all! Huskies who want to work out, play a game of basketball, or relax in the recreation center, make your way here!",
     image: "images/gallery/uwy/uwy1.jpg",
     link: "#building-UWY"
   },
   WG: {
     name: "Walsh Gardner",
-    description: "Research support and classroom facilities.",
+    description: "Need something printed? Need a computer problem fixed? Look no further, Huskies! The WG building has you covered!",
     image: "images/gallery/wg/wg1.jpg",
     link: "#building-WG"
   },
   WCG: {
     name: "West Coast Grocery",
-    description: "Mixed-use academic and resource building.",
+    description: "Huskies looking to pursue a future in Education, Social Work and Criminal Justice should visit this building!",
     image: "images/gallery/wcg/wcg1.jpg",
     link: "#building-WCG"
   },
   WHT: {
     name: "The Whitney",
-    description: "Labs and classroom spaces.",
+    description: "Located deep into the campus, this historic building houses classrooms and a seminar room!",
     image: "images/gallery/wht/wht1.jpg",
     link: "#building-WHT"
   }
