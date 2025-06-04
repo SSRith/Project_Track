@@ -1,0 +1,53 @@
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  .comic-panel {
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .comic-title {
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+    text-align: center;
+  }
+
+  .comic-button {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.75rem;
+    min-width: 100px;
+  }
+
+  .speech-bubble {
+    font-size: 0.9rem;
+    padding: 0.75rem;
+  }
+
+  .action-line {
+    font-size: 1.2rem;
+    padding: 0.3rem 0.75rem;
+  }
+
+  .comic-strip-panel {
+    min-width: 85%;
+  }
+
+  img,
+  .nav-logo {
+    max-width: 100%;
+    height: auto;
+  }
+}
+@media (max-width: 480px) {
+  #cover {
+    height: 200px; /* or auto, depending on content */
+    background-size: cover;
+    background-position: center;
+  }
+
+  #cover::before {
+    background: rgba(0,0,0,0.6); /* softer gradient on phones */
+  }
+}
