@@ -66,7 +66,8 @@ const buildingGalleries = {
   ],
   SCI: [
     { src: "images/gallery/sci/sci1.jpg", caption: "Exterior of the Science Building with modern glass and brick design, offering research and classroom spaces." },
-    { src: "images/gallery/sci/sci2.jpg", caption: "Faculty office entrance in SCI 202 with a directory of professors." }
+    { src: "images/gallery/sci/sci2.jpg", caption: "Faculty office entrance in SCI 202 with a directory of professors." },
+    { src: "images/gallery/sci/sci3.jpg", caption: "Chemistry Lab, one of the many Science based Labs in the Sci Building" }
   ],
   SNO: [
     { src: "images/gallery/sno/sno1.jpg", caption: "Front entrance of Snoqualmie, framed by trees and sunlight." },
