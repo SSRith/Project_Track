@@ -1,18 +1,61 @@
 <section id="about" class="p-8">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    <style>
+        .comic-title, 
+        .comic-panel h3 {
+            font-family: 'Bangers', cursive;
+            letter-spacing: 1px;
+        }
+    </style>
+
     <div class="comic-panel p-6 mb-8 relative mx-auto max-w-10xl">
         <div class="halftone"></div>
         <h2 class="comic-title text-4xl mb-4">About Us</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <!-- Logo Column -->
-            <div class="flex justify-center md:justify-end items-center">
-                <img src="logo.png" alt="Company Logo" class="w-64 h-auto object-contain">
+            <div class="flex justify-center md:justify-center items-center relative pl-5">
+                <div class="relative transform rotate-3 hover:rotate-0 transition-transform duration-300">
+                    <!-- Comic burst background -->
+                    <div class="absolute -inset-4 bg-gradient-to-br from-red-400 via-yellow-400 to-blue-400 rounded-full opacity-80 animate-pulse"></div>
+                    <div class="absolute -inset-2 bg-white border-4 border-black rounded-lg transform rotate-2"></div>
+                    <div class="relative bg-white border-4 border-black rounded-lg p-4 shadow-lg">
+                        <img src="logo.png" alt="Company Logo" class="w-64 h-auto object-contain relative z-10">
+                        <!-- Action lines -->
+                        <div class="absolute top-2 left-2 w-8 h-1 bg-black transform -rotate-45"></div>
+                        <div class="absolute top-4 left-1 w-6 h-1 bg-black transform -rotate-45"></div>
+                        <div class="absolute bottom-2 right-2 w-8 h-1 bg-black transform rotate-45"></div>
+                        <div class="absolute bottom-4 right-1 w-6 h-1 bg-black transform rotate-45"></div>
+                    </div>
+                </div>
             </div>
             
             <!-- Comic Box Column -->
-            <div class="bg-yellow-300 border-4 border-black rounded-lg p-6 shadow-comic">
-                <h3 class="text-2xl font-bold mb-3">Our Story</h3>
-                <p class="mb-3">........................................................................</p>
-                <p>...........................................................................</p>
+            <div class="relative">
+                <!-- Speech bubble tail -->
+                <div class="absolute -left-4 top-8 w-0 h-0 border-t-16 border-t-transparent border-b-16 border-b-transparent border-r-16 border-r-yellow-300 z-10"></div>
+                <div class="absolute -left-5 top-8 w-0 h-0 border-t-16 border-t-transparent border-b-16 border-b-transparent border-r-16 border-r-black"></div>
+                
+                <!-- Main comic box with enhanced styling -->
+                <div class="bg-yellow-300 border-4 border-black rounded-lg p-6 shadow-comic relative transform hover:scale-105 transition-transform duration-200">
+                    
+                    <!-- Comic book style corners -->
+                    <div class="absolute top-2 left-2 w-4 h-4 border-l-2 border-t-2 border-black"></div>
+                    <div class="absolute top-2 right-2 w-4 h-4 border-r-2 border-t-2 border-black"></div>
+                    <div class="absolute bottom-2 left-2 w-4 h-4 border-l-2 border-b-2 border-black"></div>
+                    <div class="absolute bottom-2 right-2 w-4 h-4 border-r-2 border-b-2 border-black"></div>
+                    
+                    <h3 class="text-2xl font-bold mb-3 relative z-10 text-black drop-shadow-sm">Our Story</h3>
+                    <p class="mb-3 relative z-10 font-medium text-black">We are a team of four students from the University of Washington Tacoma, 
+                        pursuing our degrees in Information Technology. This project is a TINFO370 project, identified as T.R.A.C.K, which aims to provide valuable guidance 
+                        for new UW Huskies as they navigate the campus and discover its various resources. We are excited to share our insights and 
+                        help fellow students make the most of their university experience!</p>
+                    
+                    <!-- Action lines around the box -->
+                    <div class="absolute -top-2 -left-2 w-12 h-1 bg-black transform -rotate-45"></div>
+                    <div class="absolute -top-1 -left-1 w-8 h-1 bg-black transform -rotate-45"></div>
+                    <div class="absolute -bottom-2 -right-2 w-12 h-1 bg-black transform rotate-45"></div>
+                    <div class="absolute -bottom-1 -right-1 w-8 h-1 bg-black transform rotate-45"></div>
+                </div>
             </div>
         </div>
     </div>
