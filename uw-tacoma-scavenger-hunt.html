@@ -504,14 +504,19 @@
 
         <div class="game-container">
             <div class="controls">
-                <button id="start-btn" class="comic-button">Start Game</button>
-                <button id="reset-btn" class="comic-button">Reset Game</button>
+            <button id="start-btn" class="comic-button" style="background-color: red; color: white;">
+            Start Game
+            </button>
+
+            <button id="reset-btn" class="comic-button" style="background-color: red; color: white;">
+            Reset Game
+            </button>
             </div>
 
             <div class="timer" id="timer">TIME: 00:00</div>
 
             <div class="progress-container">
-                <p class="progress-text" id="progress-text">PROGRESS: 0/8 LOCATIONS FOUND</p>
+                <p class="progress-text" id="progress-text">PROGRESS: 0/6 LOCATIONS FOUND</p>
                 <div class="progress-bar">
                     <div class="progress" id="progress"></div>
                 </div>
@@ -550,53 +555,41 @@
             // Game data
             const locations = [
                 {
-                    title: "Prairie Line Trail",
-                    clue: "Once trains ran through campus on this path, now transformed into a beautiful pedestrian walkway. Find the place where history meets modern campus life.",
-                    hint: "Look for the railway tracks embedded in this walking path that runs through campus.",
-                    answers: ["prairie line trail", "prairie line", "the prairie line trail", "the prairie line"]
+                    title: "Printer",
+                    clue: "In halls where knowledge freely flows, A silent scribe in shadow goes. It speaks in ink, but breathes no sound, Where papers lost are often found. Seek the brand whose letters stand, For tech and print in student hands.",
+                    hint: "Think of where assignments are born into paper form. Remember the brand that helps you print your work.",
+                    answers: ["HP", "hp"]
                 },
                 {
-                    title: "William W. Philip Hall",
-                    clue: "I'm the heart of campus events, with a glass front facing Pacific Avenue. Students gather here for orientation, ceremonies, and campus-wide celebrations.",
-                    hint: "This building is named after a former Tacoma mayor and is often used for large campus gatherings.",
-                    answers: ["william w philip hall", "philip hall", "william philip hall", "philip", "william w. philip hall", "william philip", "w.w. philip hall"]
+                    title: "The Pantry",
+                    clue: "At the fork where choices split, One sign says “up” — don’t fall for it. For those who seek where needs are met, Down below, your prize is set. Beyond the arrow, pantry lies, A hidden trove of small supplies.",
+                    hint: "When signs point you higher, think lower. Hunger isn’t found upstairs.",
+                    answers: ["Main floor", "main floor"]
                 },
                 {
-                    title: "Snoqualmie Building",
-                    clue: "I house the School of Education and am named after a local Native American tribe. Find me by searching for ancient knowledge in a renovated industrial space.",
-                    hint: "This building is located on the west side of campus and shares its name with a famous waterfall in Washington.",
-                    answers: ["snoqualmie building", "snoqualmie", "the snoqualmie building"]
+                    title: "Makerspace",
+                    clue: "Beyond the walls where tools reside, And bright invention dares to hide, A board hangs loose with scribbled thought, Where dreams are planned but never bought. Find the place where students start, And end the line with all your heart.",
+                    hint: "This space was built to bring your visions to life — the answer is in the final words of encouragement meant just for you.",
+                    answers: ["YOUR IDEAS :)", "your ideas :)"]
                 },
                 {
-                    title: "Grand Staircase",
-                    clue: "I connect downtown Tacoma to the UW campus. Climb my 80+ steps from Pacific Avenue for a workout and panoramic views of Commencement Bay.",
-                    hint: "These steps lead from Pacific Avenue up to campus and are the most prominent stairway at UW Tacoma.",
-                    answers: ["grand staircase", "the grand staircase", "grand stairs", "the grand stairs", "main staircase", "campus staircase"]
+                    title: "TLC",
+                    clue: "Before the help, before the guide, A quiet mind must first be tried. Behold the screen that starts it all, Where names are typed and tutors call. What brand begins your learning spell? A single word — you know it well.",
+                    hint: "Your journey at the TLC starts at a screen — look closely at what powers the welcome.",
+                    answers: ["Dell", "dell"]
                 },
                 {
-                    title: "Tioga Library Building",
-                    clue: "Knowledge lives within my walls, and students come to study and research. Find me with my distinctive clock tower visible from many parts of campus.",
-                    hint: "This building houses the campus library and has a distinctive clock tower on top.",
-                    answers: ["tioga library", "tioga library building", "tioga", "the tioga library", "library", "uw tacoma library"]
+                    title: "Cupboard",
+                    clue: "Where hunger meets a quiet cure, Behind old walls, support is sure. A bowl in black, a subtle sign, With words that echo, short and kind. Find the frame that feeds your sight, The answer’s tucked just under bite.",
+                    hint: "Food for thought? Not this time. This stop’s for stomachs — and the answer’s beneath the bowl that knows your need.",
+                    answers: ["Hungry now, eat now!", "hungry now, eat now!"]
                 },
                 {
-                    title: "Cherry Parkes",
-                    clue: "Many business classes are held in this renovated warehouse. My name combines two different buildings, and I'm known for exposed brick walls and timber beams.",
-                    hint: "This building houses the Milgard School of Business and has a hyphenated name.",
-                    answers: ["cherry parkes", "cherry-parkes", "cherry parkes building", "cp"]
+                    title: "Enrollment Services",
+                    clue: "Where questions find a guiding hand, And futures shaped begin to stand. Beyond the glass, beside the frame, A purple voice calls out your name. Read the wall, not just the door — What’s written there says even more.",
+                    hint: "Look not where you walk in, but just beside it — in purple, a message waits to remind you that this place was always meant for you.",
+                    answers: ["YOU belong HERE", "you belong here"]
                 },
-                {
-                    title: "The Mattress Factory",
-                    clue: "Once I manufactured places to sleep, now I house IT services and art spaces. My industrial past is still visible in my name and architecture.",
-                    hint: "This building was literally once a factory that made mattresses before being converted for campus use.",
-                    answers: ["mattress factory", "the mattress factory", "mat fac", "mattress factory building"]
-                },
-                {
-                    title: "Joy Building",
-                    clue: "Housing UW Tacoma's School of Engineering & Technology, my name might bring happiness. Find me at the south end of campus.",
-                    hint: "This building houses technology and engineering programs and its name is a single, positive emotion.",
-                    answers: ["joy building", "joy", "the joy building"]
-                }
             ];
 
             // Game state
