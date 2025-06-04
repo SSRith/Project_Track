@@ -5,7 +5,7 @@ const buildingGalleries = {
     { src: "images/gallery/bb/bb2.jpg", caption: "Interior mural and casual seating inside BB, perfect for studying or relaxing." }
   ],
   BHS: [
-    // { src: "images/gallery/bhs/bhs1.jpg", caption: "Front desk for advising at BHS" }
+    { src: "images/gallery/bhs/bhs1.jpg", caption: "BHS building view from Pac AVE" }
   ],
   CP: [
     { src: "images/gallery/cp/cp1.jpg", caption: "Main entrance of Cherry Parkes with UW signage and CP/MDS markers." }
