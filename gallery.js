@@ -75,6 +75,12 @@ const buildingGalleries = {
     { src: "images/gallery/sno/sno4.jpg", caption: "Makerspace lab with 3D printers and creative technology tools available for students." },
     { src: "images/gallery/sno/sno5.jpg", caption: "Spacious reading room with tall arched windows, steel beams, and classic industrial charm." }
   ],
+  TPS: [
+    { src: "images/gallery/tps/tps1.jpg",caption: "Exterior of the TPS (Tacoma Paper & Stationery) building showing the Husky Commons patio and entrance."},
+    { src: "images/gallery/tps/tps2.jpg",caption: "Inside the Husky Market convenience store, located in the TPS building, offering snacks and supplies."},
+    { src: "images/gallery/tps/tps3.jpg",    caption: "Student study area in Husky Commons with lounge seating, tables, and natural light from large windows."}
+
+  ],
   TLB: [
     { src: "images/gallery/tlb/tlb1.jpg", caption: "The front entrance of the TLB (Tioga Library Building), a modern facility with academic and student resources." },
     { src: "images/gallery/tlb/tlb2.jpg", caption: "Inside the Learning Commons — an open area with computers, study booths, and book stacks." },
